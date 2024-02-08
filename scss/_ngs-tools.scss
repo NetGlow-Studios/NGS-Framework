@@ -1,0 +1,23 @@
+@import '../../../styles/config';
+
+@function ngs-min-width($size) {
+  @if $size == xs {
+    @return $xs-width;
+  }
+  @if $size == sm {
+    @return $sm-width;
+  }
+  @if $size == md {
+    @return $md-width;
+  }
+  @if $size == lg {
+    @return $lg-width;
+  }
+  @if $size == xl {
+    @return $xl-width;
+  }
+  @if $size == xxl {
+    @return $xxl-width;
+  }
+  @return 0;
+}

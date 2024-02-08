@@ -1,0 +1,36 @@
+@import '../../../styles/config';
+
+.form-check-input:checked
+{
+  background-color: $primary-bg-color;
+  border-color: $primary-border-color;
+}
+
+.form-group{
+  margin-bottom: .75rem !important;
+}
+
+input:disabled{
+  color: $muted-text-color !important;
+  cursor: not-allowed;
+  border-color: $color-gray-300;
+}
+
+textarea:disabled{
+  color: $muted-text-color !important;
+  cursor: not-allowed;
+}
+
+.form-select{
+  &:focus, &:active:focus {
+    box-shadow: none !important;
+    border-color: $primary-border-color !important;
+  }
+}
+
+input {
+  &:focus, &:active:focus {
+    box-shadow: none !important;
+    border-color: $primary-border-color !important;
+  }
+}

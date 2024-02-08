@@ -1,0 +1,62 @@
+@import '../../../styles/config';
+
+@mixin ngs-shadow($name, $color) {
+  .shadow-sm-#{$name} {
+    box-shadow: 0 0.125rem 0.25rem rgba($color, 0.075) !important;
+  }
+  
+  .shadow-#{$name} {
+    box-shadow: 0 7px 30px rgba($color, 0.2) !important;
+  }
+
+  .shadow-lg-#{$name} {
+    box-shadow: 0 1rem 3rem rgba($color, 0.175) !important;
+  }
+}
+
+@include ngs-shadow(primary, $primary-bg-color);
+@include ngs-shadow(secondary, $secondary-bg-color);
+@include ngs-shadow(teritary, $teritary-bg-color);
+@include ngs-shadow(success, $success-bg-color);
+@include ngs-shadow(warning, $warning-bg-color);
+@include ngs-shadow(danger, $danger-bg-color);
+@include ngs-shadow(info, $info-bg-color);
+@include ngs-shadow(pink, $pink-bg-color);
+@include ngs-shadow(red, $red-bg-color);
+@include ngs-shadow(orange, $orange-bg-color);
+@include ngs-shadow(yellow, $yellow-bg-color);
+@include ngs-shadow(lime, $lime-bg-color);
+@include ngs-shadow(green, $green-bg-color);
+@include ngs-shadow(teal, $teal-bg-color);
+@include ngs-shadow(cyan, $cyan-bg-color);
+@include ngs-shadow(blue, $blue-bg-color);
+@include ngs-shadow(purssianblue, $persian-blue-bg-color);
+@include ngs-shadow(indigo, $indigo-bg-color);
+@include ngs-shadow(purple, $purple-bg-color);
+@include ngs-shadow(light, $light-bg-color);
+@include ngs-shadow(dark, $dark-bg-color);
+@include ngs-shadow(azure, $azure-bg-color);
+
+.shadow {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow-default {
+  box-shadow: 0 0 2px 2px rgba(246, 244, 251, 0.2) !important;
+}
+
+.shadow-0 {
+  box-shadow: none !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}

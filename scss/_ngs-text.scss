@@ -1,0 +1,174 @@
+@import '../../../styles/config';
+@import "ngs-tools";
+
+@mixin ngs-text($name, $color) {
+  .text-#{$name} {
+    color: $color !important;
+  }
+
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+}
+
+@include ngs-text(primary, $primary-text-color);
+@include ngs-text(secondary, $secondary-text-color);
+@include ngs-text(teritary, $teritary-text-color);
+@include ngs-text(success, $success-text-color);
+@include ngs-text(warning, $warning-text-color);
+@include ngs-text(danger, $danger-text-color);
+@include ngs-text(info, $info-text-color);
+@include ngs-text(pink, $pink-text-color);
+@include ngs-text(red, $red-text-color);
+@include ngs-text(orange, $orange-text-color);
+@include ngs-text(yellow, $yellow-text-color);
+@include ngs-text(lime, $lime-text-color);
+@include ngs-text(green, $green-text-color);
+@include ngs-text(teal, $teal-text-color);
+@include ngs-text(cyan, $cyan-text-color);
+@include ngs-text(blue, $blue-text-color);
+@include ngs-text(purssianblue, $persian-blue-text-color);
+@include ngs-text(indigo, $indigo-text-color);
+@include ngs-text(purple, $purple-text-color);
+@include ngs-text(light, $light-text-color);
+@include ngs-text(dark, $dark-text-color);
+@include ngs-text(azure, $azure-text-color);
+
+
+@for $i from 5 through 120 {
+  .text-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  .text-#{$i}-rem {
+    font-size: #{$i * 0.1}rem !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  .text-#{$i}-em {
+    font-size: #{$i * 0.1}rem !important;
+  }
+}
+
+.text-monospace {
+  font-family: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+@media (min-width: ngs-min-width(sm)) {
+  .text-sm-left {
+    text-align: left !important;
+  }
+
+  .text-sm-right {
+    text-align: right !important;
+  }
+
+  .text-sm-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: ngs-min-width(md)) {
+  .text-md-left {
+    text-align: left !important;
+  }
+
+  .text-md-right {
+    text-align: right !important;
+  }
+
+  .text-md-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: ngs-min-width(lg)) {
+  .text-lg-left {
+    text-align: left !important;
+  }
+
+  .text-lg-right {
+    text-align: right !important;
+  }
+
+  .text-lg-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: ngs-min-width(xl)) {
+  .text-xl-left {
+    text-align: left !important;
+  }
+
+  .text-xl-right {
+    text-align: right !important;
+  }
+
+  .text-xl-center {
+    text-align: center !important;
+  }
+}
+
+@media (min-width: ngs-min-width(xxl)) {
+    .text-xxl-left {
+        text-align: left !important;
+    }
+    
+    .text-xxl-right {
+        text-align: right !important;
+    }
+    
+    .text-xxl-center {
+        text-align: center !important;
+    }
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-muted{
+  color: $muted-text-color !important;
+}

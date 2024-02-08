@@ -1,0 +1,217 @@
+@import '../../../styles/config';
+
+.cursor-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.cursor-default {
+  &:hover {
+    cursor: default;
+  }
+}
+
+.cursor-not-allowed {
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.cursor-help {
+  &:hover {
+    cursor: help;
+  }
+}
+
+.cursor-progress {
+  &:hover {
+    cursor: progress;
+  }
+}
+
+.cursor-wait {
+  &:hover {
+    cursor: wait;
+  }
+}
+
+.cursor-cell {
+  &:hover {
+    cursor: cell;
+  }
+}
+
+.cursor-crosshair {
+  &:hover {
+    cursor: crosshair;
+  }
+}
+
+.cursor-text {
+  &:hover {
+    cursor: text;
+  }
+}
+
+.cursor-vertical-text {
+  &:hover {
+    cursor: vertical-text;
+  }
+}
+
+.cursor-alias {
+  &:hover {
+    cursor: alias;
+  }
+}
+
+.cursor-copy {
+  &:hover {
+    cursor: copy;
+  }
+}
+
+.cursor-move {
+  &:hover {
+    cursor: move;
+  }
+}
+
+.cursor-no-drop {
+  &:hover {
+    cursor: no-drop;
+  }
+}
+
+.cursor-not-allowed {
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.cursor-all-scroll {
+  &:hover {
+    cursor: all-scroll;
+  }
+}
+
+.cursor-col-resize {
+  &:hover {
+    cursor: col-resize;
+  }
+}
+
+.cursor-row-resize {
+  &:hover {
+    cursor: row-resize;
+  }
+}
+
+.cursor-n-resize {
+  &:hover {
+    cursor: n-resize;
+  }
+}
+
+.cursor-e-resize {
+  &:hover {
+    cursor: e-resize;
+  }
+}
+
+.cursor-s-resize {
+  &:hover {
+    cursor: s-resize;
+  }
+}
+
+.cursor-w-resize {
+  &:hover {
+    cursor: w-resize;
+  }
+}
+
+.cursor-ne-resize {
+  &:hover {
+    cursor: ne-resize;
+  }
+}
+
+.cursor-nw-resize {
+  &:hover {
+    cursor: nw-resize;
+  }
+}
+
+.cursor-se-resize {
+  &:hover {
+    cursor: se-resize;
+  }
+}
+
+.cursor-sw-resize {
+  &:hover {
+    cursor: sw-resize;
+  }
+}
+
+.cursor-ew-resize {
+  &:hover {
+    cursor: ew-resize;
+  }
+}
+
+.cursor-ns-resize {
+  &:hover {
+    cursor: ns-resize;
+  }
+}
+
+.cursor-nwse-resize {
+  &:hover {
+    cursor: nwse-resize;
+  }
+}
+
+.cursor-nesw-resize {
+  &:hover {
+    cursor: nesw-resize;
+  }
+}
+
+.cursor-zoom-in {
+  &:hover {
+    cursor: zoom-in;
+  }
+}
+
+.cursor-zoom-out {
+  &:hover {
+    cursor: zoom-out;
+  }
+}
+
+.cursor-grab {
+  &:hover {
+    cursor: grab;
+  }
+}
+
+.cursor-grabbing {
+  &:hover {
+    cursor: grabbing;
+  }
+}
+
+.cursor-none {
+  &:hover {
+    cursor: none;
+  }
+}
+
+.cursor-context-menu {
+  &:hover {
+    cursor: context-menu;
+  }
+}

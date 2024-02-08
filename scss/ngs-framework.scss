@@ -1,0 +1,25 @@
+@import "ngs-background";
+@import "ngs-border";
+@import "ngs-buttons";
+@import "ngs-icons";
+@import "ngs-nav";
+@import "ngs-pagination";
+@import "ngs-shadow";
+@import "ngs-structure";
+@import "ngs-table";
+@import "ngs-text";
+@import "ngs-link";
+@import "ngs-form";
+@import "ngs-datatable";
+@import "ngs-modal";
+@import "ngs-spinner";
+@import "ngs-calendar";
+@import "ngs-cursor";
+@import "ngs-popup";
+@import "ngs-select-picker";
+
+@import "../../../styles/config";
+
+a {
+  color: $dark-text-color !important;
+}

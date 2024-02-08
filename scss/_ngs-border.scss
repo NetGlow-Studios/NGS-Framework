@@ -1,0 +1,382 @@
+@import '../../../styles/config';
+
+@mixin ngs-border-color($name, $color) {
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+}
+
+@mixin ngs-border($px-thin) {
+  .border-#{$px-thin} {
+    border: #{$px-thin}px solid inherit !important;
+  }
+
+  .border-top-#{$px-thin} {
+    border-top: #{$px-thin}px solid inherit !important;
+  }
+
+  .border-end-#{$px-thin} {
+    border-right: #{$px-thin}px solid inherit !important;
+  }
+
+  .border-bottom-#{$px-thin} {
+    border-bottom: #{$px-thin}px solid inherit !important;
+  }
+
+  .border-start-#{$px-thin} {
+    border-left: #{$px-thin}px solid inherit !important;
+  }
+
+  .border-x-#{$px-thin} {
+    border-left: #{$px-thin}px solid inherit !important;
+    border-right: #{$px-thin}px solid inherit !important;
+  }
+
+  .border-y-#{$px-thin} {
+    border-top: #{$px-thin}px solid inherit !important;
+    border-bottom: #{$px-thin}px solid inherit !important;
+  }
+
+  @media (min-width: 576px) {
+    .border-sm-#{$px-thin} {
+      border: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-top-sm-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-end-sm-#{$px-thin} {
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-bottom-sm-#{$px-thin} {
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-start-sm-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-x-sm-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-y-sm-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .border-md-#{$px-thin} {
+      border: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-top-md-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-end-md-#{$px-thin} {
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-bottom-md-#{$px-thin} {
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-start-md-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-x-md-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-y-md-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+  }
+
+  @media(min-width: 992px) {
+    .border-lg-#{$px-thin} {
+      border: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-top-lg-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-end-lg-#{$px-thin} {
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-bottom-lg-#{$px-thin} {
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-start-lg-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-x-lg-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-y-lg-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    .border-xl-#{$px-thin} {
+      border: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-top-xl-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-end-xl-#{$px-thin} {
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-bottom-xl-#{$px-thin} {
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-start-xl-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-x-xl-#{$px-thin} {
+      border-left: #{$px-thin}px solid inherit !important;
+      border-right: #{$px-thin}px solid inherit !important;
+    }
+
+    .border-y-xl-#{$px-thin} {
+      border-top: #{$px-thin}px solid inherit !important;
+      border-bottom: #{$px-thin}px solid inherit !important;
+    }
+  }
+}
+
+@mixin ngs-border-gray($name, $gray-color) {
+  .border-#{$name} {
+    border-color: $gray-color !important;
+  }
+}
+
+@mixin ngs-border-radius($radius) {
+  .br-#{$radius} {
+    border-radius: $radius;
+  }
+
+  .br-tl-#{$radius} {
+    border-top-left-radius: $radius !important;
+  }
+
+  .br-bl-#{$radius} {
+    border-bottom-left-radius: $radius !important;
+  }
+
+  .br-tr-#{$radius} {
+    border-top-right-radius: $radius !important;
+  }
+
+  .br-br-#{$radius} {
+    border-bottom-right-radius: $radius !important;
+  }
+}
+
+@include ngs-border-color('primary', $primary-border-color);
+@include ngs-border-color('secondary', $secondary-border-color);
+@include ngs-border-color('teritary', $teritary-border-color);
+@include ngs-border-color('success', $success-border-color);
+@include ngs-border-color('warning', $warning-border-color);
+@include ngs-border-color('danger', $danger-border-color);
+@include ngs-border-color('info', $info-border-color);
+@include ngs-border-color('pink', $pink-border-color);
+@include ngs-border-color('red', $red-border-color);
+@include ngs-border-color('orange', $orange-border-color);
+@include ngs-border-color('yellow', $yellow-border-color);
+@include ngs-border-color('lime', $lime-border-color);
+@include ngs-border-color('green', $green-border-color);
+@include ngs-border-color('teal', $teal-border-color);
+@include ngs-border-color('cyan', $cyan-border-color);
+@include ngs-border-color('blue', $blue-border-color);
+@include ngs-border-color('purssianblue', $persian-blue-border-color);
+@include ngs-border-color('indigo', $indigo-border-color);
+@include ngs-border-color('purple', $purple-border-color);
+@include ngs-border-color('light', $light-border-color);
+@include ngs-border-color('dark', $dark-border-color);
+@include ngs-border-color('azure', $azure-border-color);
+
+@include ngs-border('0');
+@include ngs-border('1');
+@include ngs-border('2');
+@include ngs-border('3');
+@include ngs-border('4');
+
+@include ngs-border-gray('100', $color-gray-100);
+@include ngs-border-gray('200', $color-gray-200);
+@include ngs-border-gray('300', $color-gray-300);
+@include ngs-border-gray('400', $color-gray-400);
+@include ngs-border-gray('500', $color-gray-500);
+@include ngs-border-gray('600', $color-gray-600);
+@include ngs-border-gray('700', $color-gray-700);
+@include ngs-border-gray('800', $color-gray-800);
+@include ngs-border-gray('900', $color-gray-900);
+
+@include ngs-border-radius(0px);
+@include ngs-border-radius(1px);
+@include ngs-border-radius(2px);
+@include ngs-border-radius(5px);
+@include ngs-border-radius(7px);
+@include ngs-border-radius(10px);
+@include ngs-border-radius(15px);
+@include ngs-border-radius(20px);
+@include ngs-border-radius(30px);
+@include ngs-border-radius(50px);
+
+.border {
+  border: 1px solid inherit !important;
+}
+
+.border-top {
+  border-top: 1px solid inherit !important;
+}
+
+.border-end {
+  border-right: 1px solid inherit !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid inherit !important;
+}
+
+.border-start {
+  border-left: 1px solid inherit !important;
+}
+
+.border-x {
+  border-left: 1px solid inherit;
+  border-right: 1px solid inherit;
+}
+
+.border-y {
+  border-top: 1px solid inherit;
+  border-bottom: 1px solid inherit;
+}
+
+.border-transparent {
+  border: 1px solid transparent !important;
+}
+
+.br-100 {
+  border-radius: 100% !important;
+}
+
+.br-round {
+  border-radius: 26% !important;
+}
+
+.b-radius {
+  border-radius: 25%;
+}
+
+.border-danger {
+  border: 2px solid;
+}
+
+.rounded-top {
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+}
+
+.rounded-end {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+}
+
+.rounded-start {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+}
+
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+.border-dotted {
+  border: 2px dotted;
+}
+
+.border-solid {
+  border: 2px solid;
+}
+
+.br-bottom-radius-0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.br-bottom-radius-5 {
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+@media (min-width: 576px) {
+  .br-tl-sm-5 {
+    border-top-left-radius: 5px;
+  }
+
+  .br-bl-sm-5 {
+    border-bottom-left-radius: 5px;
+  }
+
+  .br-tr-sm-5 {
+    border-top-right-radius: 5px;
+  }
+
+  .br-br-sm-5 {
+    border-bottom-right-radius: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  .br-xs-bl-5 {
+    border-bottom-left-radius: 5px;
+  }
+
+  .br-xs-br-5 {
+    border-bottom-right-radius: 5px;
+  }
+
+  .br-xs-tl-5 {
+    border-top-left-radius: 5px;
+  }
+
+  .br-xs-tr-5 {
+    border-top-right-radius: 5px;
+  }
+
+  .br-sm-max-0 {
+    border-radius: 0 !important;
+  }
+}

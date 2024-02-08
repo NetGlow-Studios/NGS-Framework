@@ -1,0 +1,99 @@
+@import '../../../styles/config';
+
+
+select.select-picker {
+  display: none !important;
+}
+
+div.select-picker{
+  display: block;
+  width: 100%;
+  min-height: 1rem !important;
+  position: relative;
+  padding: .375rem 2.25rem .375rem .75rem;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  &:not(:disabled):hover{
+    cursor: pointer;
+  }
+  
+  .select-picker-header{
+    
+  }
+  
+  .select-picker-body{
+    display: none;
+    position: absolute;
+    z-index: 1900;
+    width: 100% !important;
+    left: 0;
+    
+    background-color: $light-bg-color;
+    border: 1px solid #ced4da;
+    border-radius: .2rem;
+    padding: .2rem;
+    
+    &.open-top{
+      bottom: 2.35rem;
+    }
+    
+    &:not(.open-top){
+      top: 2.35rem;
+    }
+    
+    .select-picker-options{
+      overflow: scroll;
+      max-height: 10rem;
+      padding-top: .25rem;
+    }
+    
+    div.select-picker-item{
+      width: 100%;
+      display: block;
+      span{
+        margin-left: 1rem;
+        width: 100%;
+        font-size: 1rem;
+      }
+      
+      &:not(:first-child){
+        border-radius: .25rem;
+        padding: .15rem 0;
+      }
+      
+      &:hover{
+        background-color: $color-gray-200;
+      }
+    }
+    
+    input[type='search']{
+      width: 100%;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      padding: .375rem 2.25rem .375rem .75rem;
+      margin-bottom: .5rem;
+    }
+  }
+  
+  &.active{
+    .select-picker-body{
+      display: block;
+    }
+  }
+}

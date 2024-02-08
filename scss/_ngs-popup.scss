@@ -1,0 +1,111 @@
+@import '../../../styles/config';
+
+.popup{
+  position: fixed;
+  width: 18.6rem;
+  min-height: 7rem;
+  background-color: $light-bg-color;
+  z-index: 1100;
+  color: $color-gray-900;
+  //padding: 0.4rem 0.4rem 0.4rem .6rem;
+  overflow: hidden;
+  display: none;
+
+  border: 1px solid $color-gray-400;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  
+  &.show{
+    display: block !important;
+  }
+  
+  &.popup-sm{
+    width: 14rem;
+    min-height: 5rem;
+  }
+  
+  &.popup-lg{
+    width: 21rem;
+    min-height: 10rem;
+  }
+  
+  &.popup-top{
+    top: 0.5rem !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.popup-top-start{
+    top: 0.5rem !important;
+    left: 0.5rem !important;
+  }
+  
+  &.popup-top-end{
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+  }
+
+  &.popup-bottom{
+    bottom: 2.5rem !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.popup-bottom-start{
+    bottom: 2.5rem !important;
+    left: 0.5rem !important;
+  }
+
+  &.popup-bottom-end{
+    bottom: 2.5rem !important;
+    right: 0.5rem !important;
+  }
+  
+  button.popup-close-btn{
+    position: absolute;
+    right: 0.25rem;
+    top: -.25rem;
+    background: none !important;
+    border: none !important;
+    color: $muted-text-color;
+    font-size: 1.5rem;
+    transition: all ease 0.3s;
+  }
+
+  button.popup-close-btn:hover{
+    color: $danger-text-color !important;
+  }
+  
+  .popup-header{
+    color: $primary-text-color;
+    font-size: 1.1rem;
+    padding-left: .5rem;
+    padding-top: .5rem;
+  }
+  
+  .popup-body{
+    font-size: .9rem;
+    padding-left: .7rem;
+    margin-bottom: .9rem;
+  }
+  
+  .popup-timer-bar{
+    width: 100%;
+    height: .25rem;
+    background-color: $teritary-bg-color;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@keyframes popup-close-anim {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}

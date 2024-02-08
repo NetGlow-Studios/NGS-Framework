@@ -1,0 +1,43 @@
+@import '../../../styles/config';
+
+@mixin ngs-link-color($name, $color, $hover: darken($color, 10%)) {
+  .nav-link-#{$name}{
+    &:hover {
+      color: $hover !important;
+    }
+
+    &.active{
+      color: $color !important;
+    }
+  }
+} 
+
+@include ngs-link-color(primary, $primary-text-color);
+@include ngs-link-color(secondary, $secondary-text-color);
+@include ngs-link-color(teritary, $teritary-text-color);
+@include ngs-link-color(success, $success-text-color);
+@include ngs-link-color(warning, $warning-text-color);
+@include ngs-link-color(danger, $danger-text-color);
+@include ngs-link-color(info, $info-text-color);
+@include ngs-link-color(pink, $pink-text-color);
+@include ngs-link-color(red, $red-text-color);
+@include ngs-link-color(orange, $orange-text-color);
+@include ngs-link-color(yellow, $yellow-text-color);
+@include ngs-link-color(lime, $lime-text-color);
+@include ngs-link-color(green, $green-text-color);
+@include ngs-link-color(teal, $teal-text-color);
+@include ngs-link-color(cyan, $cyan-text-color);
+@include ngs-link-color(blue, $blue-text-color);
+@include ngs-link-color(persianblue, $persian-blue-text-color);
+@include ngs-link-color(indigo, $indigo-text-color);
+@include ngs-link-color(purple, $purple-text-color);
+@include ngs-link-color(light, $light-text-color);
+@include ngs-link-color(dark, $dark-text-color);
+@include ngs-link-color(azure, $azure-text-color);
+
+
+.dropdown-item{
+  &:active{
+    background-color: $primary-bg-color !important;
+  }
+}

@@ -1,0 +1,180 @@
+@import '../../../styles/config';
+
+@mixin ngs-background-color($name, $color, $withShade: true) {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+
+  @if $withShade{
+    .bg-#{$name}-dark {
+      background-color: darken($color, $dark-value) !important;
+    }
+
+    .bg-#{$name}-darker {
+      background-color: darken($color, $darker-value) !important;
+    }
+
+    .bg-#{name}-darkest {
+      background-color: darken($color, $darkest-value) !important;
+    }
+
+    .form-check-input.bg-#{$name}-dark{
+        &:checked{
+            background-color: darken($color, $dark-value) !important;
+            border-color: darken($color, $dark-value) !important;
+        }
+        &:not(:checked){
+            background-color: $light-bg-color !important;
+            border-color: $color-gray-500 !important;
+        }
+    }
+    
+    .form-check-input.bg-#{$name}-darker{
+        &:checked{
+            background-color: darken($color, $darker-value) !important;
+            border-color: darken($color, $darker-value) !important;
+        }
+        &:not(:checked){
+            background-color: $light-bg-color !important;
+            border-color: $color-gray-500 !important;
+        }
+    }
+    
+    .form-check-input.bg-#{$name}-darkest{
+        &:checked{
+            background-color: darken($color, $darkest-value) !important;
+            border-color: darken($color, $darkest-value) !important;
+        }
+        &:not(:checked){
+            background-color: $light-bg-color !important;
+            border-color: $color-gray-500 !important;
+        }
+    }
+
+    .bg-#{$name}-light {
+      background-color: lighten($color, $light-value) !important;
+    }
+
+    .bg-#{$name}-lighter {
+      background-color: lighten($color, $lighter-value) !important;
+    }
+
+    .bg-#{$name}-lightest {
+      background-color: lighten($color, $lightest-value) !important;
+    }
+    
+    .form-check-input.bg-#{$name}-light{
+        &:checked{
+            background-color: lighten($color, $light-value) !important;
+            border-color: lighten($color, $light-value) !important;
+        }
+        &:not(:checked){
+            background-color: $light-bg-color !important;
+            border-color: $color-gray-500 !important;
+        }
+    }
+    
+    .form-check-input.bg-#{$name}-lighter{
+        &:checked{
+            background-color: lighten($color, $lighter-value) !important;
+            border-color: lighten($color, $lighter-value) !important;
+        }
+        &:not(:checked){
+            background-color: $light-bg-color !important;
+            border-color: $color-gray-500 !important;
+        }
+    }
+    
+    .form-check-input.bg-#{$name}-lightest{
+        &:checked{
+            background-color: lighten($color, $lightest-value) !important;
+            border-color: lighten($color, $lightest-value) !important;
+        }
+        &:not(:checked){
+            background-color: $light-bg-color !important;
+            border-color: $color-gray-500 !important;
+        }
+    }
+  }
+
+  .bg-#{$name}-transparent {
+    background-color: rgba($color, 0.15) !important;
+  }
+
+  a.bg-#{$name}:hover,
+  a.bg-#{$name}:focus {
+    background-color: lighten($color, 10%) !important;
+  }
+
+  button.bg-#{$name}:hover,
+  button.bg-#{$name}:focus {
+    background-color: lighten($color, 10%) !important;
+  }
+
+  .form-check-input.bg-#{$name}
+  {
+    &:checked{
+      background-color: $color !important;
+      border-color: $color !important;
+    }
+    &:not(:checked){
+      background-color: $light-bg-color !important;
+      border-color: $color-gray-500 !important;
+    }
+  }
+}
+
+@include ngs-background-color(primary, $primary-bg-color);
+@include ngs-background-color(secondary, $secondary-bg-color);
+@include ngs-background-color(teritary, $teritary-bg-color);
+@include ngs-background-color(success, $success-bg-color);
+@include ngs-background-color(warning, $warning-bg-color);
+@include ngs-background-color(danger, $danger-bg-color);
+@include ngs-background-color(info, $info-bg-color);
+@include ngs-background-color(pink, $pink-bg-color);
+@include ngs-background-color(red, $red-bg-color);
+@include ngs-background-color(orange, $orange-bg-color);
+@include ngs-background-color(yellow, $yellow-bg-color);
+@include ngs-background-color(lime, $lime-bg-color);
+@include ngs-background-color(green, $green-bg-color);
+@include ngs-background-color(teal, $teal-bg-color);
+@include ngs-background-color(cyan, $cyan-bg-color);
+@include ngs-background-color(blue, $blue-bg-color);
+@include ngs-background-color(persianblue, $persian-blue-bg-color);
+@include ngs-background-color(indigo, $indigo-bg-color);
+@include ngs-background-color(purple, $purple-bg-color);
+@include ngs-background-color(light, $light-bg-color);
+@include ngs-background-color(dark, $dark-bg-color);
+@include ngs-background-color(azure, $azure-bg-color);
+
+@include ngs-background-color(gray-100, $color-gray-100);
+@include ngs-background-color(gray-200, $color-gray-200);
+@include ngs-background-color(gray-300, $color-gray-300);
+@include ngs-background-color(gray-400, $color-gray-400);
+@include ngs-background-color(gray-500, $color-gray-500);
+@include ngs-background-color(gray-600, $color-gray-600);
+@include ngs-background-color(gray-700, $color-gray-700);
+@include ngs-background-color(gray-800, $color-gray-800);
+@include ngs-background-color(gray-900, $color-gray-900);
+
+@include ngs-background-color(white, $color-white, false);
+@include ngs-background-color(white-1, $color-white-1, false);
+@include ngs-background-color(white-2, $color-white-2, false);
+@include ngs-background-color(white-3, $color-white-3, false);
+@include ngs-background-color(white-4, $color-white-4, false);
+@include ngs-background-color(white-5, $color-white-5, false);
+@include ngs-background-color(white-6, $color-white-6, false);
+@include ngs-background-color(white-7, $color-white-7, false);
+@include ngs-background-color(white-8, $color-white-8, false);
+@include ngs-background-color(white-9, $color-white-9, false);
+
+@include ngs-background-color(black, $color-black, false);
+@include ngs-background-color(black-1, $color-black-1, false);
+@include ngs-background-color(black-2, $color-black-2, false);
+@include ngs-background-color(black-3, $color-black-3, false);
+@include ngs-background-color(black-4, $color-black-4, false);
+@include ngs-background-color(black-5, $color-black-5, false);
+@include ngs-background-color(black-6, $color-black-6, false);
+@include ngs-background-color(black-7, $color-black-7, false);
+@include ngs-background-color(black-8, $color-black-8, false);
+@include ngs-background-color(black-9, $color-black-9, false);
