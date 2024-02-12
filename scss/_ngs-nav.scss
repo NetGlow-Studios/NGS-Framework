@@ -1,4 +1,4 @@
-@import '../../../styles/config';
+@import 'config';
 
 @mixin ngs-link-color($name, $color, $hover: darken($color, 10%)) {
   .nav-link-#{$name}{

@@ -1,4 +1,4 @@
-@import '../../../styles/config';
+@import 'config';
 
 @mixin ngs-background-color($name, $color, $withShade: true) {
   .bg-#{$name} {

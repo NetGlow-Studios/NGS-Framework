@@ -1,4 +1,4 @@
-@import '../../../styles/config';
+@import 'config';
 
 @function ngs-min-width($size) {
   @if $size == xs {

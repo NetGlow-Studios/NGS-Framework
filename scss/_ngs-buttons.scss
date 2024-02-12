@@ -1,4 +1,4 @@
-@import '../../../styles/config';
+@import 'config';
 
 @mixin ngs-button($name, $color, $background-color, $border-color, $hover-color, $hover-border-color) {
   .btn-#{$name} {
