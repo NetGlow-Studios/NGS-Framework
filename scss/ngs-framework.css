@@ -10461,6 +10461,7 @@ button.bg-black-9:focus {
   border-left: 2px solid rgb(216, 219, 227);
   border-top: 2px solid rgb(216, 219, 227);
   transition: all ease 0.2s;
+  user-select: none;
 }
 .ngs-pagination .pagination-header.sm .header-page-item {
   padding: 0.5rem !important;
@@ -22438,6 +22439,10 @@ input:focus, input:active:focus {
   border-color: rgb(143, 189, 86) !important;
 }
 
+input[type=checkbox].form-check-input.form-lg-check-input {
+  font-size: 1.4rem !important;
+}
+
 .dataTables_wrapper .dataTables_paginate {
   color: rgb(52, 58, 64) !important;
 }
@@ -23070,7 +23075,7 @@ div.select-picker .select-picker-body:not(.open-top) {
   top: 2.35rem;
 }
 div.select-picker .select-picker-body .select-picker-options {
-  overflow: scroll;
+  overflow-y: auto;
   max-height: 10rem;
   padding-top: 0.25rem;
 }

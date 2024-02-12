@@ -102,6 +102,23 @@ class AjaxRequest {
             });
         });
     }
+
+    SendRawGet() {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url: this.url,
+                type: 'GET',
+                processData: this.processData,
+                contentType: this.contentType,
+                success: function (response) {
+                    resolve(response);
+                },
+                error: function (xhr, status, error) {
+                    reject(error);
+                }
+            });
+        });
+    }
 }
 
 

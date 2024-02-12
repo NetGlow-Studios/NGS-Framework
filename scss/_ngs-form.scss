@@ -34,3 +34,7 @@ input {
     border-color: $primary-border-color !important;
   }
 }
+
+input[type="checkbox"].form-check-input.form-lg-check-input{
+  font-size: 1.4rem !important;
+}

@@ -13,7 +13,7 @@ $(document).ready(function (node) {
         if ($(currentSelect).data('ngs-pos') === "from_bottom") {
             body.addClass('open-top');
         }
-        
+
         if ($(currentSelect).data('ngs-search') === true) {
             body.append(searcher);
         }
@@ -24,7 +24,7 @@ $(document).ready(function (node) {
 
         body.append(bodyOptions);
 
-        selectPickerNode.append($(`<span class="select-picker-header">${$(currentSelect).find('option:disabled:hidden').text()}</span>`));
+        selectPickerNode.append($(`<span class="select-picker-header">${$(currentSelect).find('option:selected').text()}</span>`));
         selectPickerNode.append(body);
         $(this).parent().append(selectPickerNode);
 
@@ -44,31 +44,35 @@ $(document).ready(function (node) {
             $(bodyOptions).html('');
 
             let newOptions = [];
-            
+
             let amount = 0;
 
             $(options).each(function (optionIndex, option) {
                 amount++;
                 let optionText = $(option).text().toLowerCase();
-                
-                if (optionText.includes(searchVal)){
+
+                if (optionText.includes(searchVal)) {
                     newOptions.push(option);
                 }
             });
-            
+
             generate_options(currentSelect, newOptions, bodyOptions, maxOptions);
         });
     })
 
     function generate_options(currentSelect, options, bodyOptions, maxOptions) {
         $(options).each(function (index, option) {
-            if (index > 0 && (!maxOptions || index <= maxOptions)) {
+            if($(option).val() === "" || $(option).val() == null) return;
+            
+            if (!maxOptions || index <= maxOptions) {
                 let optionNode = $(`<div class="select-picker-item" data-ngs-value="${$(option).val()}"><span>${$(option).text()}</span></div>`);
 
                 optionNode.on('click', function () {
-                    $(currentSelect).find(`option[value=${$(option).val()}]`).val($(option).val());
-                    $(bodyOptions).parent().parent().removeClass('active');
-                    $(bodyOptions).parent().parent().find('.select-picker-header').text($(option).text());
+                    if ($(currentSelect).find(`option[value=${$(option).val()}]`) != null) {
+                        $(currentSelect).val($(option).val());
+                        $(bodyOptions).parent().parent().removeClass('active');
+                        $(bodyOptions).parent().parent().find('.select-picker-header').text($(option).text());  
+                    }
                 });
 
                 bodyOptions.append(optionNode);

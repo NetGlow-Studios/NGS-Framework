@@ -57,7 +57,7 @@ div.select-picker{
     }
     
     .select-picker-options{
-      overflow: scroll;
+      overflow-y: auto;
       max-height: 10rem;
       padding-top: .25rem;
     }

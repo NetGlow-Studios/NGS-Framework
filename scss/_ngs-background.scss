@@ -5,7 +5,7 @@
     background-color: $color !important;
   }
 
-  @if $withShade{
+  @if $withShade {
     .bg-#{$name}-dark {
       background-color: darken($color, $dark-value) !important;
     }
@@ -18,37 +18,40 @@
       background-color: darken($color, $darkest-value) !important;
     }
 
-    .form-check-input.bg-#{$name}-dark{
-        &:checked{
-            background-color: darken($color, $dark-value) !important;
-            border-color: darken($color, $dark-value) !important;
-        }
-        &:not(:checked){
-            background-color: $light-bg-color !important;
-            border-color: $color-gray-500 !important;
-        }
+    .form-check-input.bg-#{$name}-dark {
+      &:checked {
+        background-color: darken($color, $dark-value) !important;
+        border-color: darken($color, $dark-value) !important;
+      }
+
+      &:not(:checked) {
+        background-color: $light-bg-color !important;
+        border-color: $color-gray-500 !important;
+      }
     }
-    
-    .form-check-input.bg-#{$name}-darker{
-        &:checked{
-            background-color: darken($color, $darker-value) !important;
-            border-color: darken($color, $darker-value) !important;
-        }
-        &:not(:checked){
-            background-color: $light-bg-color !important;
-            border-color: $color-gray-500 !important;
-        }
+
+    .form-check-input.bg-#{$name}-darker {
+      &:checked {
+        background-color: darken($color, $darker-value) !important;
+        border-color: darken($color, $darker-value) !important;
+      }
+
+      &:not(:checked) {
+        background-color: $light-bg-color !important;
+        border-color: $color-gray-500 !important;
+      }
     }
-    
-    .form-check-input.bg-#{$name}-darkest{
-        &:checked{
-            background-color: darken($color, $darkest-value) !important;
-            border-color: darken($color, $darkest-value) !important;
-        }
-        &:not(:checked){
-            background-color: $light-bg-color !important;
-            border-color: $color-gray-500 !important;
-        }
+
+    .form-check-input.bg-#{$name}-darkest {
+      &:checked {
+        background-color: darken($color, $darkest-value) !important;
+        border-color: darken($color, $darkest-value) !important;
+      }
+
+      &:not(:checked) {
+        background-color: $light-bg-color !important;
+        border-color: $color-gray-500 !important;
+      }
     }
 
     .bg-#{$name}-light {
@@ -62,38 +65,41 @@
     .bg-#{$name}-lightest {
       background-color: lighten($color, $lightest-value) !important;
     }
-    
-    .form-check-input.bg-#{$name}-light{
-        &:checked{
-            background-color: lighten($color, $light-value) !important;
-            border-color: lighten($color, $light-value) !important;
-        }
-        &:not(:checked){
-            background-color: $light-bg-color !important;
-            border-color: $color-gray-500 !important;
-        }
+
+    .form-check-input.bg-#{$name}-light {
+      &:checked {
+        background-color: lighten($color, $light-value) !important;
+        border-color: lighten($color, $light-value) !important;
+      }
+
+      &:not(:checked) {
+        background-color: $light-bg-color !important;
+        border-color: $color-gray-500 !important;
+      }
     }
-    
-    .form-check-input.bg-#{$name}-lighter{
-        &:checked{
-            background-color: lighten($color, $lighter-value) !important;
-            border-color: lighten($color, $lighter-value) !important;
-        }
-        &:not(:checked){
-            background-color: $light-bg-color !important;
-            border-color: $color-gray-500 !important;
-        }
+
+    .form-check-input.bg-#{$name}-lighter {
+      &:checked {
+        background-color: lighten($color, $lighter-value) !important;
+        border-color: lighten($color, $lighter-value) !important;
+      }
+
+      &:not(:checked) {
+        background-color: $light-bg-color !important;
+        border-color: $color-gray-500 !important;
+      }
     }
-    
-    .form-check-input.bg-#{$name}-lightest{
-        &:checked{
-            background-color: lighten($color, $lightest-value) !important;
-            border-color: lighten($color, $lightest-value) !important;
-        }
-        &:not(:checked){
-            background-color: $light-bg-color !important;
-            border-color: $color-gray-500 !important;
-        }
+
+    .form-check-input.bg-#{$name}-lightest {
+      &:checked {
+        background-color: lighten($color, $lightest-value) !important;
+        border-color: lighten($color, $lightest-value) !important;
+      }
+
+      &:not(:checked) {
+        background-color: $light-bg-color !important;
+        border-color: $color-gray-500 !important;
+      }
     }
   }
 
@@ -111,13 +117,13 @@
     background-color: lighten($color, 10%) !important;
   }
 
-  .form-check-input.bg-#{$name}
-  {
-    &:checked{
+  .form-check-input.bg-#{$name} {
+    &:checked {
       background-color: $color !important;
       border-color: $color !important;
     }
-    &:not(:checked){
+
+    &:not(:checked) {
       background-color: $light-bg-color !important;
       border-color: $color-gray-500 !important;
     }
