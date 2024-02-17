@@ -65,7 +65,7 @@
 
   &.pagination-left {
     .pagination-header {
-      justify-content: left !important;
+      justify-content: left;
 
       .header-page-item {
         width: auto;
@@ -73,13 +73,13 @@
     }
 
     .pagination-body {
-      border-top-left-radius: 0 !important;
+      border-top-left-radius: 0;
     }
   }
 
   &.pagination-center {
     .pagination-header {
-      justify-content: center !important;
+      justify-content: center;
 
       .header-page-item {
         width: auto;
@@ -89,7 +89,7 @@
 
   &.pagination-right {
     .pagination-header {
-      justify-content: right !important;
+      justify-content: right;
 
       .header-page-item {
         width: auto;
@@ -97,22 +97,22 @@
     }
 
     .pagination-body {
-      border-top-right-radius: 0 !important;
+      border-top-right-radius: 0;
     }
   }
 
   &.pagination-fluid {
     .pagination-header {
-      justify-content: left !important;
+      justify-content: left;
 
       .header-page-item {
-        width: 100% !important;
+        width: 100% ;
       }
     }
 
     .pagination-body {
-      border-top-right-radius: 0 !important;
-      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
     }
   }
 

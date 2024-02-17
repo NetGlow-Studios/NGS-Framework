@@ -10,6 +10,11 @@
   margin-bottom: .75rem !important;
 }
 
+.form-switch {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 input:disabled{
   color: $muted-text-color !important;
   cursor: not-allowed;

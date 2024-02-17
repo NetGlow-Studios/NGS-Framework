@@ -80,7 +80,7 @@
 }
 
 @mixin ngs-button-outline($name, $text-color, $text-hover-color, $background-color, $border-color, $hover-color, $hover-border-color) {
-  .btn-outline-#{$name}{
+  .btn-outline-#{$name} {
     color: $text-color !important;
     fill: $background-color;
     background: transparent !important;
@@ -88,7 +88,7 @@
     border-color: $border-color;
     transition: all ease 0.3s;
 
-    &:hover {
+    &:not(:disabled):not(.disabled):hover {
       color: $text-hover-color !important;
       fill: #fff;
       background: $background-color !important;
@@ -96,101 +96,101 @@
     }
   }
   
-    .btn-outline-#{$name}-dark{
-        color: darken($text-color, $dark-value) !important;
-        fill: darken($background-color, $dark-value);
-        background: transparent !important;
-        background-image: none;
-        border-color: darken($border-color, $dark-value);
-        transition: all ease 0.3s;
-    
-        &:hover {
-        color: darken($text-hover-color, $dark-value) !important;
-        fill: #fff;
-        background: darken($background-color, $dark-value) !important;
-        border-color: darken($hover-border-color, $dark-value);
-        }
+  .btn-outline-#{$name}-dark {
+    color: darken($text-color, $dark-value) !important;
+    fill: darken($background-color, $dark-value);
+    background: transparent !important;
+    background-image: none;
+    border-color: darken($border-color, $dark-value);
+    transition: all ease 0.3s;
+
+    &:not(:disabled):not(.disabled):hover {
+      color: darken($text-hover-color, $dark-value) !important;
+      fill: #fff;
+      background: darken($background-color, $dark-value) !important;
+      border-color: darken($hover-border-color, $dark-value);
     }
-  
-    .btn-outline-#{$name}-darker{
-        color: darken($text-color, $darker-value) !important;
-        fill: darken($background-color, $darker-value);
-        background: transparent !important;
-        background-image: none;
-        border-color: darken($border-color, $darker-value);
-        transition: all ease 0.3s;
-    
-        &:hover {
-        color: darken($text-hover-color, $darker-value) !important;
-        fill: #fff;
-        background: darken($background-color, $darker-value) !important;
-        border-color: darken($hover-border-color, $darker-value);
-        }
+  }
+
+  .btn-outline-#{$name}-darker {
+    color: darken($text-color, $darker-value) !important;
+    fill: darken($background-color, $darker-value);
+    background: transparent !important;
+    background-image: none;
+    border-color: darken($border-color, $darker-value);
+    transition: all ease 0.3s;
+
+    &:not(:disabled):hover {
+      color: darken($text-hover-color, $darker-value) !important;
+      fill: #fff;
+      background: darken($background-color, $darker-value) !important;
+      border-color: darken($hover-border-color, $darker-value);
     }
-  
-    .btn-outline-#{$name}-darkest{
-        color: darken($text-color, $darkest-value) !important;
-        fill: darken($background-color, $darkest-value);
-        background: transparent !important;
-        background-image: none;
-        border-color: darken($border-color, $darkest-value);
-        transition: all ease 0.3s;
-    
-        &:hover {
-        color: darken($text-hover-color, $darkest-value) !important;
-        fill: #fff;
-        background: darken($background-color, $darkest-value) !important;
-        border-color: darken($hover-border-color, $darkest-value);
-        }
+  }
+
+  .btn-outline-#{$name}-darkest {
+    color: darken($text-color, $darkest-value) !important;
+    fill: darken($background-color, $darkest-value);
+    background: transparent !important;
+    background-image: none;
+    border-color: darken($border-color, $darkest-value);
+    transition: all ease 0.3s;
+
+    &:not(:disabled):not(.disabled):hover {
+      color: darken($text-hover-color, $darkest-value) !important;
+      fill: #fff;
+      background: darken($background-color, $darkest-value) !important;
+      border-color: darken($hover-border-color, $darkest-value);
     }
-  
-    .btn-outline-#{$name}-light{
-        color: lighten($text-color, $light-value) !important;
-        fill: lighten($background-color, $light-value);
-        background: transparent !important;
-        background-image: none;
-        border-color: lighten($border-color, $light-value);
-        transition: all ease 0.3s;
-    
-        &:hover {
-        color: lighten($text-hover-color, $light-value) !important;
-        fill: #fff;
-        background: lighten($background-color, $light-value) !important;
-        border-color: lighten($hover-border-color, $light-value);
-        }
+  }
+
+  .btn-outline-#{$name}-light {
+    color: lighten($text-color, $light-value) !important;
+    fill: lighten($background-color, $light-value);
+    background: transparent !important;
+    background-image: none;
+    border-color: lighten($border-color, $light-value);
+    transition: all ease 0.3s;
+
+    &:not(:disabled):not(.disabled):hover {
+      color: lighten($text-hover-color, $light-value) !important;
+      fill: #fff;
+      background: lighten($background-color, $light-value) !important;
+      border-color: lighten($hover-border-color, $light-value);
     }
-  
-    .btn-outline-#{$name}-lighter{
-        color: lighten($text-color, $lighter-value) !important;
-        fill: lighten($background-color, $lighter-value);
-        background: transparent !important;
-        background-image: none;
-        border-color: lighten($border-color, $lighter-value);
-        transition: all ease 0.3s;
-    
-        &:hover {
-        color: lighten($text-hover-color, $lighter-value) !important;
-        fill: #fff;
-        background: lighten($background-color, $lighter-value) !important;
-        border-color: lighten($hover-border-color, $lighter-value);
-        }
+  }
+
+  .btn-outline-#{$name}-lighter {
+    color: lighten($text-color, $lighter-value) !important;
+    fill: lighten($background-color, $lighter-value);
+    background: transparent !important;
+    background-image: none;
+    border-color: lighten($border-color, $lighter-value);
+    transition: all ease 0.3s;
+
+    &:not(:disabled):not(.disabled):hover {
+      color: lighten($text-hover-color, $lighter-value) !important;
+      fill: #fff;
+      background: lighten($background-color, $lighter-value) !important;
+      border-color: lighten($hover-border-color, $lighter-value);
     }
-  
-    .btn-outline-#{$name}-lightest{
-        color: lighten($text-color, $lightest-value) !important;
-        fill: lighten($background-color, $lightest-value);
-        background: transparent !important;
-        background-image: none;
-        border-color: lighten($border-color, $lightest-value);
-        transition: all ease 0.3s;
-    
-        &:hover {
-        color: lighten($text-hover-color, $lightest-value) !important;
-        fill: #fff;
-        background: lighten($background-color, $lightest-value) !important;
-        border-color: lighten($hover-border-color, $lightest-value);
-        }
+  }
+
+  .btn-outline-#{$name}-lightest {
+    color: lighten($text-color, $lightest-value) !important;
+    fill: lighten($background-color, $lightest-value);
+    background: transparent !important;
+    background-image: none;
+    border-color: lighten($border-color, $lightest-value);
+    transition: all ease 0.3s;
+
+    &:not(:disabled):not(.disabled):hover {
+      color: lighten($text-hover-color, $lightest-value) !important;
+      fill: #fff;
+      background: lighten($background-color, $lightest-value) !important;
+      border-color: lighten($hover-border-color, $lightest-value);
     }
+  }
 }
 
 @function generate-button($name, $color, $background-color, $border-color, $hover-color, $hover-border-color) {
@@ -226,25 +226,25 @@
 @include ngs-button(dark, rgb(255, 255, 255), $dark-bg-color, $dark-border-color, $dark-bg-hover-color, $dark-border-color);
 @include ngs-button(azure, rgb(255, 255, 255), $azure-bg-color, $azure-border-color, $azure-bg-hover-color, $azure-border-color);
 
-@include ngs-button-outline(primary, $primary-text-color, rgb(255,255,255), $primary-bg-color, $primary-border-color, $primary-bg-hover-color, $primary-border-color);
-@include ngs-button-outline(secondary, $secondary-text-color, rgb(255,255,255), $secondary-bg-color, $secondary-border-color, $secondary-bg-hover-color, $secondary-border-color);
-@include ngs-button-outline(teritary, $teritary-text-color, rgb(255,255,255), $teritary-bg-color, $teritary-border-color, $teritary-bg-hover-color, $teritary-border-color);
-@include ngs-button-outline(success, $success-text-color, rgb(255,255,255), $success-bg-color, $success-border-color, $success-bg-hover-color, $success-border-color);
-@include ngs-button-outline(warning, $warning-text-color, rgb(255,255,255), $warning-bg-color, $warning-border-color, $warning-bg-hover-color, $warning-border-color);
-@include ngs-button-outline(danger, $danger-text-color, rgb(255,255,255), $danger-bg-color, $danger-border-color, $danger-bg-hover-color, $danger-border-color);
-@include ngs-button-outline(info, $info-text-color, rgb(255,255,255), $info-bg-color, $info-border-color, $info-bg-hover-color, $info-border-color);
-@include ngs-button-outline(pink, $pink-text-color, rgb(255,255,255), $pink-bg-color, $pink-border-color, $pink-bg-hover-color, $pink-border-color);
-@include ngs-button-outline(red, $red-text-color, rgb(255,255,255), $red-bg-color, $red-border-color, $red-bg-hover-color, $red-border-color);
-@include ngs-button-outline(orange, $orange-text-color, rgb(255,255,255), $orange-bg-color, $orange-border-color, $orange-bg-hover-color, $orange-border-color);
-@include ngs-button-outline(yellow, $yellow-text-color, rgb(255,255,255), $yellow-bg-color, $yellow-border-color, $yellow-bg-hover-color, $yellow-border-color);
-@include ngs-button-outline(lime, $lime-text-color, rgb(255,255,255), $lime-bg-color, $lime-border-color, $lime-bg-hover-color, $lime-border-color);
-@include ngs-button-outline(green, $green-text-color, rgb(255,255,255), $green-bg-color, $green-border-color, $green-bg-hover-color, $green-border-color);
-@include ngs-button-outline(teal, $teal-text-color, rgb(255,255,255), $teal-bg-color, $teal-border-color, $teal-bg-hover-color, $teal-border-color);
-@include ngs-button-outline(cyan, $cyan-text-color, rgb(255,255,255), $cyan-bg-color, $cyan-border-color, $cyan-bg-hover-color, $cyan-border-color);
-@include ngs-button-outline(blue, $blue-text-color, rgb(255,255,255), $blue-bg-color, $blue-border-color, $blue-bg-hover-color, $blue-border-color);
-@include ngs-button-outline(persianblue, $persian-blue-text-color, rgb(255,255,255), $persian-blue-bg-color, $persian-blue-border-color, $persian-blue-bg-hover-color, $persian-blue-border-color);
-@include ngs-button-outline(indigo, $indigo-text-color, rgb(255,255,255), $indigo-bg-color, $indigo-border-color, $indigo-bg-hover-color, $indigo-border-color);
-@include ngs-button-outline(purple, $purple-text-color, rgb(255,255,255), $purple-bg-color, $purple-border-color, $purple-bg-hover-color, $purple-border-color);
-@include ngs-button-outline(light, $light-text-color, rgb(255,255,255), $light-bg-color, $light-border-color, $light-bg-hover-color, $light-border-color);
-@include ngs-button-outline(dark, $dark-text-color, rgb(255,255,255), $dark-bg-color, $dark-border-color, $dark-bg-hover-color, $dark-border-color);
-@include ngs-button-outline(azure, $azure-text-color, rgb(255,255,255), $azure-bg-color, $azure-border-color, $azure-bg-hover-color, $azure-border-color);
+@include ngs-button-outline(primary, $primary-text-color, rgb(255, 255, 255), $primary-bg-color, $primary-border-color, $primary-bg-hover-color, $primary-border-color);
+@include ngs-button-outline(secondary, $secondary-text-color, rgb(255, 255, 255), $secondary-bg-color, $secondary-border-color, $secondary-bg-hover-color, $secondary-border-color);
+@include ngs-button-outline(teritary, $teritary-text-color, rgb(255, 255, 255), $teritary-bg-color, $teritary-border-color, $teritary-bg-hover-color, $teritary-border-color);
+@include ngs-button-outline(success, $success-text-color, rgb(255, 255, 255), $success-bg-color, $success-border-color, $success-bg-hover-color, $success-border-color);
+@include ngs-button-outline(warning, $warning-text-color, rgb(255, 255, 255), $warning-bg-color, $warning-border-color, $warning-bg-hover-color, $warning-border-color);
+@include ngs-button-outline(danger, $danger-text-color, rgb(255, 255, 255), $danger-bg-color, $danger-border-color, $danger-bg-hover-color, $danger-border-color);
+@include ngs-button-outline(info, $info-text-color, rgb(255, 255, 255), $info-bg-color, $info-border-color, $info-bg-hover-color, $info-border-color);
+@include ngs-button-outline(pink, $pink-text-color, rgb(255, 255, 255), $pink-bg-color, $pink-border-color, $pink-bg-hover-color, $pink-border-color);
+@include ngs-button-outline(red, $red-text-color, rgb(255, 255, 255), $red-bg-color, $red-border-color, $red-bg-hover-color, $red-border-color);
+@include ngs-button-outline(orange, $orange-text-color, rgb(255, 255, 255), $orange-bg-color, $orange-border-color, $orange-bg-hover-color, $orange-border-color);
+@include ngs-button-outline(yellow, $yellow-text-color, rgb(255, 255, 255), $yellow-bg-color, $yellow-border-color, $yellow-bg-hover-color, $yellow-border-color);
+@include ngs-button-outline(lime, $lime-text-color, rgb(255, 255, 255), $lime-bg-color, $lime-border-color, $lime-bg-hover-color, $lime-border-color);
+@include ngs-button-outline(green, $green-text-color, rgb(255, 255, 255), $green-bg-color, $green-border-color, $green-bg-hover-color, $green-border-color);
+@include ngs-button-outline(teal, $teal-text-color, rgb(255, 255, 255), $teal-bg-color, $teal-border-color, $teal-bg-hover-color, $teal-border-color);
+@include ngs-button-outline(cyan, $cyan-text-color, rgb(255, 255, 255), $cyan-bg-color, $cyan-border-color, $cyan-bg-hover-color, $cyan-border-color);
+@include ngs-button-outline(blue, $blue-text-color, rgb(255, 255, 255), $blue-bg-color, $blue-border-color, $blue-bg-hover-color, $blue-border-color);
+@include ngs-button-outline(persianblue, $persian-blue-text-color, rgb(255, 255, 255), $persian-blue-bg-color, $persian-blue-border-color, $persian-blue-bg-hover-color, $persian-blue-border-color);
+@include ngs-button-outline(indigo, $indigo-text-color, rgb(255, 255, 255), $indigo-bg-color, $indigo-border-color, $indigo-bg-hover-color, $indigo-border-color);
+@include ngs-button-outline(purple, $purple-text-color, rgb(255, 255, 255), $purple-bg-color, $purple-border-color, $purple-bg-hover-color, $purple-border-color);
+@include ngs-button-outline(light, $light-text-color, rgb(255, 255, 255), $light-bg-color, $light-border-color, $light-bg-hover-color, $light-border-color);
+@include ngs-button-outline(dark, $dark-text-color, rgb(255, 255, 255), $dark-bg-color, $dark-border-color, $dark-bg-hover-color, $dark-border-color);
+@include ngs-button-outline(azure, $azure-text-color, rgb(255, 255, 255), $azure-bg-color, $azure-border-color, $azure-bg-hover-color, $azure-border-color);

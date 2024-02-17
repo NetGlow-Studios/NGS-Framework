@@ -4,18 +4,42 @@
   .bg-#{$name} {
     background-color: $color !important;
   }
+  
+  .bg-#{$name}-hover{
+    &:hover {
+      background-color: $color !important;
+    }
+  }
 
   @if $withShade {
     .bg-#{$name}-dark {
       background-color: darken($color, $dark-value) !important;
     }
+    
+    .bg-#{$name}-dark-hover{
+      &:hover {
+        background-color: darken($color, $dark-value) !important;
+      }
+    }
 
     .bg-#{$name}-darker {
       background-color: darken($color, $darker-value) !important;
     }
+    
+    .bg-#{$name}-darker-hover{
+      &:hover {
+        background-color: darken($color, $darker-value) !important;
+      }
+    }
 
     .bg-#{name}-darkest {
       background-color: darken($color, $darkest-value) !important;
+    }
+    
+    .bg-#{$name}-darkest-hover{
+      &:hover {
+        background-color: darken($color, $darkest-value) !important;
+      }
     }
 
     .form-check-input.bg-#{$name}-dark {
@@ -57,13 +81,31 @@
     .bg-#{$name}-light {
       background-color: lighten($color, $light-value) !important;
     }
+    
+    .bg-#{$name}-light-hover{
+      &:hover {
+        background-color: lighten($color, $light-value) !important;
+      }
+    }
 
     .bg-#{$name}-lighter {
       background-color: lighten($color, $lighter-value) !important;
     }
+    
+    .bg-#{$name}-lighter-hover{
+      &:hover {
+        background-color: lighten($color, $lighter-value) !important;
+      }
+    }
 
     .bg-#{$name}-lightest {
       background-color: lighten($color, $lightest-value) !important;
+    }
+    
+    .bg-#{$name}-lightest-hover{
+      &:hover {
+        background-color: lighten($color, $lightest-value) !important;
+      }
     }
 
     .form-check-input.bg-#{$name}-light {
