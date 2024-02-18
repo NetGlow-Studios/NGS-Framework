@@ -5,8 +5,7 @@ class fluentRequest {
     /**
      * Create a fluent request.
      */
-    constructor(event = null) {
-        event?.preventDefault();
+    constructor(event = null, form = null) {
         this._url = '';
         this._method = 'GET';
         this._data = null;
@@ -15,15 +14,20 @@ class fluentRequest {
         this._cache = false;
         this._headers = {};
         this._button = null;
+
+        event?.preventDefault();
+        if (form) {
+            $(form).find('.error').text('');
+        }
     }
 
     /**
      * Send the request and return a promise with the response.
      * @return {Promise} A promise that resolves with the response.
      */
-    send() {
-        $(this._button).addClass('disabled');
-        
+    send(handleActionOnStart = true) {
+        $(this._button)?.addClass('disabled');
+
         return new Promise((resolve) => {
             $.ajax({
                 url: this._url,
@@ -34,8 +38,8 @@ class fluentRequest {
                 cache: this._cache,
                 headers: this._headers
             }).then(function (response) {
-                $(this._button).removeClass('disabled');
-                resolve(fluentResponse.parse(response));
+                $(this._button)?.removeClass('disabled');
+                resolve(fluentResponse.parse(response, handleActionOnStart));
             });
         });
     }
@@ -49,45 +53,46 @@ class fluentRequest {
     }
 
     // The following methods set the HTTP method and send the request.
-
-    sendPost() {
+    sendPost(handleActionOnStart = true) {
         this._method = 'POST';
-        return this.send();
+        return this.send(handleActionOnStart);
     }
 
-    sendGet() {
+    sendGet(handleActionOnStart = true) {
         this._method = 'GET';
-        return this.send();
+        this._url = this._url + '?' + $.param(this._data);
+        this._data = null;
+        return this.send(handleActionOnStart);
     }
 
-    sendPut() {
+    sendPut(handleActionOnStart = true) {
         this._method = 'PUT';
-        return this.send();
+        return this.send(handleActionOnStart);
     }
 
-    sendDelete() {
+    sendDelete(handleActionOnStart = true) {
         this._method = 'DELETE';
-        return this.send();
+        return this.send(handleActionOnStart);
     }
 
-    sendPatch() {
+    sendPatch(handleActionOnStart = true) {
         this._method = 'PATCH';
-        return this.send();
+        return this.send(handleActionOnStart);
     }
 
-    sendHead() {
+    sendHead(handleActionOnStart = true) {
         this._method = 'HEAD';
-        return this.send();
+        return this.send(handleActionOnStart);
     }
 
-    sendOptions() {
+    sendOptions(handleActionOnStart = true) {
         this._method = 'OPTIONS';
-        return this.send();
+        return this.send(handleActionOnStart);
     }
 
-    sendTrace() {
+    sendTrace(handleActionOnStart = true) {
         this._method = 'TRACE';
-        return this.send();
+        return this.send(handleActionOnStart);
     }
 }
 
@@ -111,17 +116,22 @@ class fluentResponse {
     /**
      * Parse a JSON string into a fluent response.
      * @param {string} jsonString - The JSON string to parse.
+     * @param handleAction - Handle action when the response has been received.
      * @return {fluentResponse|fluentErrorResponse} The parsed response.
      */
-    static parse(jsonString) {
+    static parse(jsonString, handleAction = true) {
         const responseObj = JSON.parse(JSON.stringify(jsonString));
         if (responseObj.statusCode === 200) {
             let res = new fluentResponse(responseObj);
-            res.handleAction();
+            if (handleAction) {
+                res.handleAction();
+            }
             return res;
         } else if (responseObj.statusCode === 400) {
             let res = new fluentErrorResponse(responseObj);
-            res.handleAction();
+            if (handleAction) {
+                res.handleAction();
+            }
             return res;
         }
     }
@@ -132,43 +142,73 @@ class fluentResponse {
     handleAction() {
         switch (this.requiredAction) {
             case 1 || 2: // RedirectToAction
-                if (this.content) {
-                    window.location.href = this.content;
-                }
+                this.handleRedirectToAction();
                 break;
             case 3: // Modal
-                if (this.content) {
-                    let handler = $('#modal-handler');
-                    handler.html(this.content);
-                    
-                    const mo = handler.find('.modal');
-
-                    let backdrop = mo.data('backdrop') === undefined ? true : mo.data('backdrop');
-                    let keyboard = mo.data('keyboard') === undefined ? true : mo.data('keyboard');
-
-                    mo.modal({backdrop: backdrop, keyboard: keyboard});
-                    mo.modal('show');
-
-                    mo.on('click', '*[data-dismiss="modal"]', function () {
-                        mo.modal('hide');
-                        
-                        if($(this).data('ngs-reload') === true){
-                            window.location.reload();
-                        }
-                    });
-                }
+                this.handleModal();
                 break;
             case 4: // Refresh
-                window.location.reload();
+                this.handleRefresh();
                 break;
             case 5: //Close
-                window.close();
+                this.handleClose();
                 break;
             case 6: // HandleError
                 if (this instanceof fluentErrorResponse) {
                     this.handleErrorResponse();
                 }
+                break;
+            case 7: // Download
+                this.handleDownload();
+                break;
         }
+    }
+
+    handleRedirectToAction() {
+        if (this.requiredAction === 3) {
+            if (this.content) {
+                window.location.href = this.content;
+            }else{
+                console.warn("FluentResponse: Invalid content. Cannot handle redirect to action.");
+            }
+        }
+    }
+
+    handleModal() {
+        if (this.requiredAction === 3) {
+            if (this.content) {
+                let handler = $('#modal-handler');
+                handler.html(this.content);
+
+                const mo = handler.find('.modal');
+
+                let backdrop = mo.data('backdrop') === undefined ? true : mo.data('backdrop');
+                let keyboard = mo.data('keyboard') === undefined ? true : mo.data('keyboard');
+
+                mo.modal({backdrop: backdrop, keyboard: keyboard});
+                mo.modal('show');
+
+                mo.on('click', '*[data-dismiss="modal"]', function () {
+                    mo.modal('hide');
+
+                    if (mo.data('ngs-reload-on-close') === true) {
+                        window.location.reload();
+                    }
+                });
+            }else{
+                console.warn("FluentResponse: Invalid content. Cannot handle modal.");
+            }
+        }else{
+            console.warn(`FluentResponse: Current required action: ${this.requiredAction}. Cannot handle modal.`);
+        }
+    }
+
+    handleRefresh() {
+        window.location.reload();
+    }
+
+    handleClose() {
+        window.close();
     }
 
     /**
@@ -184,6 +224,15 @@ class fluentResponse {
                 console.error(`Element with id ${item.key} not found. For error message: ${item.content}`);
             }
         });
+    }
+
+    handleDownload() {
+        let byte = base64ToArrayBuffer(this.content.file);
+        let blob = new Blob([byte], {type: this.content.contentType});
+        let link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = this.content.fileName;
+        link.click();
     }
 
     /**
@@ -210,4 +259,15 @@ class fluentErrorResponse extends fluentResponse {
             this.errorMessages = response.content;
         }
     }
+}
+
+function base64ToArrayBuffer(base64) {
+    let binaryString = window.atob(base64);
+    let binaryLen = binaryString.length;
+    let bytes = new Uint8Array(binaryLen);
+    for (let i = 0; i < binaryLen; i++) {
+        let ascii = binaryString.charCodeAt(i);
+        bytes[i] = ascii;
+    }
+    return bytes;
 }
