@@ -65,19 +65,26 @@ div.select-picker{
     div.select-picker-item{
       width: 100%;
       display: block;
+      border-left: .2rem solid rgba(255,255,255,0);
+      padding: .18rem 0;
+      
       span{
         margin-left: 1rem;
         width: 100%;
         font-size: 1rem;
       }
-      
-      &:not(:first-child){
-        border-radius: .25rem;
-        padding: .15rem 0;
+
+      &:not(:disabled):not(.disabled):hover{
+        border-radius: 0 .25rem .25rem 0;
+        background-color: rgba($primary-bg-color, .1);
+        border-left: .2rem solid $primary-border-color;
       }
-      
-      &:hover{
-        background-color: $color-gray-200;
+
+      &:disabled:hover, &.disabled:hover{
+        border-radius: 0 .25rem .25rem 0;
+        background-color: rgba($danger-bg-color, .1);
+        border-left: .2rem solid rgba($danger-bg-color, .5);
+        cursor: not-allowed;
       }
     }
     

@@ -24014,18 +24014,24 @@ div.select-picker .select-picker-body .select-picker-options {
 div.select-picker .select-picker-body div.select-picker-item {
   width: 100%;
   display: block;
+  border-left: 0.2rem solid rgba(255, 255, 255, 0);
+  padding: 0.18rem 0;
 }
 div.select-picker .select-picker-body div.select-picker-item span {
   margin-left: 1rem;
   width: 100%;
   font-size: 1rem;
 }
-div.select-picker .select-picker-body div.select-picker-item:not(:first-child) {
-  border-radius: 0.25rem;
-  padding: 0.15rem 0;
+div.select-picker .select-picker-body div.select-picker-item:not(:disabled):not(.disabled):hover {
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: rgba(143, 189, 86, 0.1);
+  border-left: 0.2rem solid rgb(143, 189, 86);
 }
-div.select-picker .select-picker-body div.select-picker-item:hover {
-  background-color: rgb(234, 237, 241);
+div.select-picker .select-picker-body div.select-picker-item:disabled:hover, div.select-picker .select-picker-body div.select-picker-item.disabled:hover {
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: rgba(209, 44, 71, 0.1);
+  border-left: 0.2rem solid rgba(209, 44, 71, 0.5);
+  cursor: not-allowed;
 }
 div.select-picker .select-picker-body input[type=search] {
   width: 100%;

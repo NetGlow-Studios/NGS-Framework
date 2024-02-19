@@ -26,7 +26,9 @@ class fluentRequest {
      * @return {Promise} A promise that resolves with the response.
      */
     send(handleActionOnStart = true) {
-        $(this._button)?.addClass('disabled');
+        let btn = $(this._button);
+        btn?.addClass('disabled');
+        btn?.append('<span class="spinner-border spinner-border-sm ms-1" role="status" aria-hidden="true"></span>');
 
         return new Promise((resolve) => {
             $.ajax({
@@ -38,7 +40,8 @@ class fluentRequest {
                 cache: this._cache,
                 headers: this._headers
             }).then(function (response) {
-                $(this._button)?.removeClass('disabled');
+                btn?.removeClass('disabled');
+                btn?.find('.spinner-border').remove();
                 resolve(fluentResponse.parse(response, handleActionOnStart));
             });
         });
@@ -133,6 +136,11 @@ class fluentResponse {
                 res.handleAction();
             }
             return res;
+        } else if (responseObj.statusCode === 500){
+            let res = new fluentInternalServerError(responseObj);
+            if (handleAction) {
+                res.handleAction();
+            }
         }
     }
 
@@ -161,13 +169,19 @@ class fluentResponse {
             case 7: // Download
                 this.handleDownload();
                 break;
+            case 8: // Internal Error
+                if (this instanceof fluentInternalServerError) {
+                    this.handleInternalError();
+                }
+                break;
         }
     }
 
     handleRedirectToAction() {
-        if (this.requiredAction === 3) {
+        if (this.requiredAction === 1 || 2) {
             if (this.content) {
-                window.location.href = this.content;
+                window.open(this.content.url, this.content.target);
+               // window.location.href = this.content;
             }else{
                 console.warn("FluentResponse: Invalid content. Cannot handle redirect to action.");
             }
@@ -234,6 +248,11 @@ class fluentResponse {
         link.download = this.content.fileName;
         link.click();
     }
+    
+    handleInternalError() {
+        console.error("Internal error");
+        $(`#${this.content.modalId}`).modal('show');
+    }
 
     /**
      * Get the response.
@@ -258,6 +277,16 @@ class fluentErrorResponse extends fluentResponse {
         if (response.content && Array.isArray(response.content)) {
             this.errorMessages = response.content;
         }
+    }
+}
+
+class fluentInternalServerError extends fluentResponse {
+    /**
+     * Create a fluent error response.
+     * @param {Object} response - The response object.
+     */
+    constructor(response) {
+        super(response);
     }
 }
 
