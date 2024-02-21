@@ -1,4 +1,4 @@
-$(document).ready(function (node) {
+$(document).ready(function () {
     const colorPickers = $('div.select-picker');
 
     $('select.select-picker').each(function (currentSelectIndex, currentSelect) {

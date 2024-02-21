@@ -34,9 +34,10 @@ textarea:disabled{
 }
 
 input {
-  &:focus, &:active:focus {
+  &:focus, &:active:focus, &:active {
     box-shadow: none !important;
     border-color: $primary-border-color !important;
+    outline: none !important;
   }
 }
 

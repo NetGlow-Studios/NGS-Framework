@@ -38,7 +38,7 @@
 @include ngs-shadow(azure, $azure-bg-color);
 
 .shadow {
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+  box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .125) !important;
 }
 
 .shadow-sm {

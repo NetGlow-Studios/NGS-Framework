@@ -11910,7 +11910,7 @@ button.bg-black-9:focus {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.125) !important;
 }
 
 .shadow-sm {
@@ -23366,9 +23366,10 @@ textarea:disabled {
   border-color: rgb(143, 189, 86) !important;
 }
 
-input:focus, input:active:focus {
+input:focus, input:active:focus, input:active {
   box-shadow: none !important;
   border-color: rgb(143, 189, 86) !important;
+  outline: none !important;
 }
 
 input[type=checkbox].form-check-input.form-lg-check-input {
@@ -24045,6 +24046,55 @@ div.select-picker.active .select-picker-body {
   display: block;
 }
 
+div.tel-picker {
+  display: flex;
+  width: 100%;
+  min-height: 1rem !important;
+  position: relative;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+div.tel-picker .tel-picker-country-select {
+  padding: 0.375rem 0 0.375rem 0;
+  min-width: 1rem;
+  width: 6.5rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border-right: 1px solid #ced4da;
+}
+div.tel-picker .tel-picker-country-select .country {
+  padding-left: 2.5rem;
+}
+div.tel-picker .tel-picker-country-select .country.flag-pl {
+  background: url("../../../lib/ngs-framework/assets/images/flags/pl.svg") no-repeat;
+  background-size: 2rem 2rem;
+}
+div.tel-picker .tel-picker-country-select .country.flag-us {
+  background: url("../../../lib/ngs-framework/assets/images/flags/us.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker input {
+  margin-left: 0.5rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  border: none !important;
+  box-shadow: none !important;
+}
+div.tel-picker:not(:disabled):hover {
+  cursor: pointer;
+}
+
 .d-none {
   display: none !important;
 }
@@ -24229,6 +24279,19 @@ div.select-picker.active .select-picker-body {
     display: inline-grid !important;
   }
 }
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.no-focus {
+  user-focus: none;
+}
+
 a {
   color: rgb(52, 58, 64) !important;
 }

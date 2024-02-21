@@ -10,6 +10,7 @@ class fluentRequest {
         this._method = 'GET';
         this._data = null;
         this._contentType = 'application/x-www-form-urlencoded; charset=UTF-8';
+        this._processData = true;
         this._dataType = '';
         this._cache = false;
         this._headers = {};
@@ -28,7 +29,10 @@ class fluentRequest {
     send(handleActionOnStart = true) {
         let btn = $(this._button);
         btn?.addClass('disabled');
-        btn?.append('<span class="spinner-border spinner-border-sm ms-1" role="status" aria-hidden="true"></span>');
+        //check if the btn is a button or a link to append the spinner
+        if(btn?.is('button') || btn?.is('input[type="submit"]')){
+            btn?.append('<span class="spinner-border spinner-border-sm ms-1" role="status" aria-hidden="true"></span>');
+        }
 
         return new Promise((resolve) => {
             $.ajax({
@@ -36,6 +40,7 @@ class fluentRequest {
                 type: this._method,
                 data: this._data,
                 contentType: this._contentType,
+                processData: this._processData,
                 dataType: this._dataType,
                 cache: this._cache,
                 headers: this._headers
@@ -136,7 +141,7 @@ class fluentResponse {
                 res.handleAction();
             }
             return res;
-        } else if (responseObj.statusCode === 500){
+        } else if (responseObj.statusCode === 500) {
             let res = new fluentInternalServerError(responseObj);
             if (handleAction) {
                 res.handleAction();
@@ -178,18 +183,20 @@ class fluentResponse {
     }
 
     handleRedirectToAction() {
-        if (this.requiredAction === 1 || 2) {
+        if (this.requiredAction === 0 || 1 || 2) {
             if (this.content) {
                 window.open(this.content.url, this.content.target);
-               // window.location.href = this.content;
-            }else{
+                // window.location.href = this.content;
+            } else {
                 console.warn("FluentResponse: Invalid content. Cannot handle redirect to action.");
             }
+        }else{
+            console.warn(`FluentResponse: Current required action: ${this.requiredAction}. Cannot handle redirect to action.`);
         }
     }
 
     handleModal() {
-        if (this.requiredAction === 3) {
+        if (this.requiredAction === 0 || 3) {
             if (this.content) {
                 let handler = $('#modal-handler');
                 handler.html(this.content);
@@ -209,46 +216,62 @@ class fluentResponse {
                         window.location.reload();
                     }
                 });
-            }else{
+            } else {
                 console.warn("FluentResponse: Invalid content. Cannot handle modal.");
             }
-        }else{
+        } else {
             console.warn(`FluentResponse: Current required action: ${this.requiredAction}. Cannot handle modal.`);
         }
     }
 
     handleRefresh() {
-        window.location.reload();
+        if (this.requiredAction === 0 || 4) {
+            window.location.reload();
+        }else{
+            console.warn(`FluentResponse: Current required action: ${this.requiredAction}. Cannot handle refresh.`);
+        }
     }
 
     handleClose() {
-        window.close();
+        if (this.requiredAction === 0 || 5) {
+            window.close();
+        }else{
+            console.warn(`FluentResponse: Current required action: ${this.requiredAction}. Cannot handle close.`);
+        }
     }
 
     /**
      * Handle the error response.
      */
     handleErrorResponse() {
-        this.errorMessages.forEach(item => {
-            let errorhandler = $(`span[id=${item.id}]`);
+        if (this.requiredAction === 0 || 6) {
+            this.errorMessages.forEach(item => {
+                let errorhandler = $('body').find(`span[id=${item.id}]`);
 
-            if (errorhandler) {
-                errorhandler.text(item.content);
-            } else {
-                console.error(`Element with id ${item.key} not found. For error message: ${item.content}`);
-            }
-        });
+                if (errorhandler.length > 0) {
+                    errorhandler.text(item.content);
+                } else {
+                    console.error(`Element with id ${item.id} not found. For error message: ${item.content}`);
+                }
+            }); 
+        }else{
+            console.warn(`FluentResponse: Current required action: ${this.requiredAction}. Cannot handle error response.`);
+        }
     }
 
     handleDownload() {
-        let byte = base64ToArrayBuffer(this.content.file);
-        let blob = new Blob([byte], {type: this.content.contentType});
-        let link = document.createElement('a');
-        link.href = window.URL.createObjectURL(blob);
-        link.download = this.content.fileName;
-        link.click();
+        if (this.requiredAction === 0 || 7) {
+            let byte = base64ToArrayBuffer(this.content.file);
+            let blob = new Blob([byte], {type: this.content.contentType});
+            let link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = this.content.fileName;
+            link.click();
+        }else{
+            console.warn(`FluentResponse: Current required action: ${this.requiredAction}. Cannot handle download.`);
+        }
     }
-    
+
     handleInternalError() {
         console.error("Internal error");
         $(`#${this.content.modalId}`).modal('show');
