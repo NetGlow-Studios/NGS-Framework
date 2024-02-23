@@ -68,7 +68,7 @@ class fluentRequest {
 
     sendGet(handleActionOnStart = true) {
         this._method = 'GET';
-        this._url = this._url + '?' + $.param(this._data);
+        this._url = this._url + '?' + this._data;
         this._data = null;
         return this.send(handleActionOnStart);
     }
