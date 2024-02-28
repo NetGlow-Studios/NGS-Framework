@@ -19,6 +19,29 @@ class fluentRequest {
         event?.preventDefault();
         if (form) {
             $(form).find('.error').text('');
+
+            this._button = $(form).find('button[type="submit"]').length > 0 
+                ? $(form).find('button[type="submit"]') 
+                : $(form).find('input[type="submit"]');
+            
+            if(form.action !== ''){
+                this._url = form.action;
+            }
+            
+            if(form.method !== ''){
+                this._method = form.method;
+            }
+            
+            if(form.enctype !== ''){
+                this._contentType = form.enctype;
+                
+                if(form.enctype === 'multipart/form-data'){
+                    this._processData = false;
+                    this._data = new FormData(form);
+                }else{
+                    this._data = $(form).serialize();
+                }
+            }
         }
     }
 

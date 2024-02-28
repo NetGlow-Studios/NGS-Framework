@@ -7703,7 +7703,7 @@ button.bg-black-9:focus {
 }
 
 .btn-outline-success {
-  color: rgb(60, 118, 61) !important;
+  color: rgb(68, 132, 69) !important;
   fill: rgb(16, 162, 67);
   background: transparent !important;
   background-image: none;
@@ -7718,7 +7718,7 @@ button.bg-black-9:focus {
 }
 
 .btn-outline-success-dark {
-  color: #2b542c !important;
+  color: #336233 !important;
   fill: #0b7430;
   background: transparent !important;
   background-image: none;
@@ -7733,7 +7733,7 @@ button.bg-black-9:focus {
 }
 
 .btn-outline-success-darker {
-  color: #224323 !important;
+  color: #2a522b !important;
   fill: #095c26;
   background: transparent !important;
   background-image: none;
@@ -7748,7 +7748,7 @@ button.bg-black-9:focus {
 }
 
 .btn-outline-success-darkest {
-  color: #162c17 !important;
+  color: #1e3a1e !important;
   fill: #063c19;
   background: transparent !important;
   background-image: none;
@@ -7763,7 +7763,7 @@ button.bg-black-9:focus {
 }
 
 .btn-outline-success-light {
-  color: #4d984e !important;
+  color: #55a657 !important;
   fill: #15d056;
   background: transparent !important;
   background-image: none;
@@ -7778,7 +7778,7 @@ button.bg-black-9:focus {
 }
 
 .btn-outline-success-lighter {
-  color: #56a957 !important;
+  color: #65b066 !important;
   fill: #17e860;
   background: transparent !important;
   background-image: none;
@@ -7793,7 +7793,7 @@ button.bg-black-9:focus {
 }
 
 .btn-outline-success-lightest {
-  color: #6db56f !important;
+  color: #7cbc7d !important;
   fill: #37eb76;
   background: transparent !important;
   background-image: none;
@@ -11258,10 +11258,10 @@ button.bg-black-9:focus {
 }
 
 .nav-link-success:hover {
-  color: #2b542c !important;
+  color: #336233 !important;
 }
 .nav-link-success.active {
-  color: rgb(60, 118, 61) !important;
+  color: rgb(68, 132, 69) !important;
 }
 
 .nav-link-warning:hover {
@@ -21371,11 +21371,11 @@ table.dataTable > thead .sorting, table.dataTable > thead .sorting_asc, table.da
 }
 
 .text-success {
-  color: rgb(60, 118, 61) !important;
+  color: rgb(68, 132, 69) !important;
 }
 
 .text-success-hover:hover {
-  color: rgb(60, 118, 61) !important;
+  color: rgb(68, 132, 69) !important;
 }
 
 .text-warning {
@@ -22959,13 +22959,13 @@ a {
 }
 
 .link-success {
-  color: rgb(60, 118, 61) !important;
+  color: rgb(68, 132, 69) !important;
   transition: all ease 0.1s;
   text-decoration: none;
 }
 .link-success:hover {
   cursor: pointer;
-  color: #2b542c !important;
+  color: #336233 !important;
   text-decoration: underline !important;
 }
 
@@ -22975,7 +22975,7 @@ a {
 }
 .link-success-hover:hover {
   cursor: pointer;
-  color: rgb(60, 118, 61) !important;
+  color: rgb(68, 132, 69) !important;
   text-decoration: underline;
 }
 
