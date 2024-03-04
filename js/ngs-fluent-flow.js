@@ -24,23 +24,25 @@ class fluentRequest {
                 ? $(form).find('button[type="submit"]') 
                 : $(form).find('input[type="submit"]');
             
-            if(form.action !== ''){
-                this._url = form.action;
+            let formAction = $(form).attr('action');
+            let formMethod = $(form).attr('method');
+            let formEnctype = $(form).attr('enctype');
+
+            this._url = formAction;
+            
+            if(formMethod !== '' && formMethod !== null && formMethod !== undefined){
+                this._method = formMethod;
             }
             
-            if(form.method !== ''){
-                this._method = form.method;
+            if(formEnctype !== '' && formEnctype !== null && formEnctype !== undefined){
+                this._contentType = formEnctype;
             }
-            
-            if(form.enctype !== ''){
-                this._contentType = form.enctype;
-                
-                if(form.enctype === 'multipart/form-data'){
-                    this._processData = false;
-                    this._data = new FormData(form);
-                }else{
-                    this._data = $(form).serialize();
-                }
+
+            if(formEnctype === 'multipart/form-data'){
+                this._processData = false;
+                this._data = new FormData(form);
+            }else{
+                this._data = $(form).serialize();
             }
         }
     }
@@ -50,12 +52,17 @@ class fluentRequest {
      * @return {Promise} A promise that resolves with the response.
      */
     send(handleActionOnStart = true) {
-        let btn = $(this._button);
-        btn?.addClass('disabled');
-        //check if the btn is a button or a link to append the spinner
-        if(btn?.is('button') || btn?.is('input[type="submit"]')){
-            btn?.append('<span class="spinner-border spinner-border-sm ms-1" role="status" aria-hidden="true"></span>');
+        if(this._url === '' || this._url === null || this._url === undefined){
+            console.error('FluentRequest: The URL is not set.');
+            return new Promise((resolve, reject) => {
+                reject('The URL is not set.');
+            });
         }
+        
+        let btn = $(this._button);
+
+        btn?.addClass('disabled');
+        btn?.append('<span class="spinner-border spinner-border-sm ms-1" role="status" aria-hidden="true"></span>');
 
         return new Promise((resolve) => {
             $.ajax({
@@ -70,6 +77,7 @@ class fluentRequest {
             }).then(function (response) {
                 btn?.removeClass('disabled');
                 btn?.find('.spinner-border').remove();
+                
                 resolve(fluentResponse.parse(response, handleActionOnStart));
             });
         });
@@ -222,6 +230,12 @@ class fluentResponse {
         if (this.requiredAction === 0 || 3) {
             if (this.content) {
                 let handler = $('#modal-handler');
+                
+                //check if the handler has already a modal
+                if(handler.find('.modal').length > 0){
+                    handler.find('.modal').modal('dispose');
+                }
+                
                 handler.html(this.content);
 
                 const mo = handler.find('.modal');
@@ -341,8 +355,7 @@ function base64ToArrayBuffer(base64) {
     let binaryLen = binaryString.length;
     let bytes = new Uint8Array(binaryLen);
     for (let i = 0; i < binaryLen; i++) {
-        let ascii = binaryString.charCodeAt(i);
-        bytes[i] = ascii;
+        bytes[i] = binaryString.charCodeAt(i);
     }
     return bytes;
 }
