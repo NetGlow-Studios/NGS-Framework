@@ -5793,6 +5793,10 @@ button.bg-black-9:focus {
   border-radius: 0 !important;
 }
 
+.rounded {
+  border-radius: 0.2rem !important;
+}
+
 .border-dotted {
   border: 2px dotted;
 }
@@ -24095,15 +24099,46 @@ div.tel-picker .tel-picker-country-select {
   border-right: 1px solid #ced4da;
 }
 div.tel-picker .tel-picker-country-select .country {
+  padding-right: 2rem;
+  text-align: right;
+  user-select: none;
+}
+div.tel-picker .tel-picker-body {
+  display: none;
+  position: absolute;
+  z-index: 1900;
+  width: 25% !important;
+  left: 0;
+  margin-top: 0.1rem;
+  background-color: rgb(253, 254, 255);
+  border: 1px solid #ced4da;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+}
+div.tel-picker .tel-picker-body.open-top {
+  bottom: 2.35rem;
+}
+div.tel-picker .tel-picker-body:not(.open-top) {
+  top: 2.35rem;
+}
+div.tel-picker .tel-picker-body .tel-picker-options {
+  overflow-y: auto;
+  max-height: 10rem;
+}
+div.tel-picker .tel-picker-body .tel-picker-options div {
+  margin-left: 0.4rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   padding-left: 2.5rem;
 }
-div.tel-picker .tel-picker-country-select .country.flag-pl {
-  background: url("../../../lib/ngs-framework/assets/images/flags/pl.svg") no-repeat;
-  background-size: 2rem 2rem;
+div.tel-picker .tel-picker-body .tel-picker-options div:not(:last-child) {
+  border-bottom: 1px solid #ced4da;
 }
-div.tel-picker .tel-picker-country-select .country.flag-us {
-  background: url("../../../lib/ngs-framework/assets/images/flags/us.svg") no-repeat;
-  background-size: 1.8rem 1.8rem;
+div.tel-picker .tel-picker-body .tel-picker-options div:hover {
+  background-color: rgb(249, 249, 251);
+}
+div.tel-picker.active .tel-picker-body {
+  display: block;
 }
 div.tel-picker input {
   margin-left: 0.5rem;
@@ -24114,6 +24149,218 @@ div.tel-picker input {
 }
 div.tel-picker:not(:disabled):hover {
   cursor: pointer;
+}
+div.tel-picker .flag-pl {
+  background: url("../../../lib/ngs-framework/assets/images/flags/pl.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-de {
+  background: url("../../../lib/ngs-framework/assets/images/flags/de.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-gb {
+  background: url("../../../lib/ngs-framework/assets/images/flags/gb.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-us {
+  background: url("../../../lib/ngs-framework/assets/images/flags/us.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ru {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ru.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ua {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ua.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-fr {
+  background: url("../../../lib/ngs-framework/assets/images/flags/fr.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-it {
+  background: url("../../../lib/ngs-framework/assets/images/flags/it.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-es {
+  background: url("../../../lib/ngs-framework/assets/images/flags/es.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-cn {
+  background: url("../../../lib/ngs-framework/assets/images/flags/cn.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-jp {
+  background: url("../../../lib/ngs-framework/assets/images/flags/jp.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-kr {
+  background: url("../../../lib/ngs-framework/assets/images/flags/kr.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-in {
+  background: url("../../../lib/ngs-framework/assets/images/flags/in.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-br {
+  background: url("../../../lib/ngs-framework/assets/images/flags/br.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ca {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ca.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-au {
+  background: url("../../../lib/ngs-framework/assets/images/flags/au.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-mx {
+  background: url("../../../lib/ngs-framework/assets/images/flags/mx.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-id {
+  background: url("../../../lib/ngs-framework/assets/images/flags/id.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-tr {
+  background: url("../../../lib/ngs-framework/assets/images/flags/tr.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-nl {
+  background: url("../../../lib/ngs-framework/assets/images/flags/nl.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-be {
+  background: url("../../../lib/ngs-framework/assets/images/flags/be.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-se {
+  background: url("../../../lib/ngs-framework/assets/images/flags/se.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ch {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ch.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-at {
+  background: url("../../../lib/ngs-framework/assets/images/flags/at.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-no {
+  background: url("../../../lib/ngs-framework/assets/images/flags/no.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-dk {
+  background: url("../../../lib/ngs-framework/assets/images/flags/dk.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-fi {
+  background: url("../../../lib/ngs-framework/assets/images/flags/fi.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-gr {
+  background: url("../../../lib/ngs-framework/assets/images/flags/gr.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-cz {
+  background: url("../../../lib/ngs-framework/assets/images/flags/cz.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-pt {
+  background: url("../../../lib/ngs-framework/assets/images/flags/pt.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-hu {
+  background: url("../../../lib/ngs-framework/assets/images/flags/hu.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ie {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ie.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ro {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ro.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-za {
+  background: url("../../../lib/ngs-framework/assets/images/flags/za.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-sg {
+  background: url("../../../lib/ngs-framework/assets/images/flags/sg.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-my {
+  background: url("../../../lib/ngs-framework/assets/images/flags/my.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-nz {
+  background: url("../../../lib/ngs-framework/assets/images/flags/nz.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-th {
+  background: url("../../../lib/ngs-framework/assets/images/flags/th.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ph {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ph.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-il {
+  background: url("../../../lib/ngs-framework/assets/images/flags/il.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ae {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ae.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-sa {
+  background: url("../../../lib/ngs-framework/assets/images/flags/sa.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-eg {
+  background: url("../../../lib/ngs-framework/assets/images/flags/eg.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-pk {
+  background: url("../../../lib/ngs-framework/assets/images/flags/pk.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-cl {
+  background: url("../../../lib/ngs-framework/assets/images/flags/cl.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-co {
+  background: url("../../../lib/ngs-framework/assets/images/flags/co.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-vn {
+  background: url("../../../lib/ngs-framework/assets/images/flags/vn.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ar {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ar.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-bd {
+  background: url("../../../lib/ngs-framework/assets/images/flags/bd.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-dz {
+  background: url("../../../lib/ngs-framework/assets/images/flags/dz.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ma {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ma.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-ir {
+  background: url("../../../lib/ngs-framework/assets/images/flags/ir.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
+}
+div.tel-picker .flag-iq {
+  background: url("../../../lib/ngs-framework/assets/images/flags/iq.svg") no-repeat;
+  background-size: 1.8rem 1.8rem;
 }
 
 .d-none {
