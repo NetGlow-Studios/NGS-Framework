@@ -1,12 +1,10 @@
 .no-select{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    -webkit-user-select: none; /* WebKit (Chrome, Safari) */
+    -moz-user-select: none; /* Gecko (Firefox) */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* CSS3 */
 }
 
 .no-focus{
-  user-focus: none;
+    user-focus: none;
 }
