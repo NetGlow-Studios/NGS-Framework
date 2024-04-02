@@ -8,6 +8,10 @@
 
 .form-group{
   margin-bottom: .75rem !important;
+  
+  label{
+    margin-bottom: .3rem;
+  }
 }
 
 .form-switch {
@@ -43,4 +47,8 @@ input {
 
 input[type="checkbox"].form-check-input.form-lg-check-input{
   font-size: 1.4rem !important;
+}
+
+span.error {
+  margin-left: 0.4rem;
 }

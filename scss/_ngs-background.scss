@@ -4,8 +4,8 @@
   .bg-#{$name} {
     background-color: $color !important;
   }
-  
-  .bg-#{$name}-hover{
+
+  .bg-#{$name}-hover {
     &:hover {
       background-color: $color !important;
     }
@@ -15,8 +15,8 @@
     .bg-#{$name}-dark {
       background-color: darken($color, $dark-value) !important;
     }
-    
-    .bg-#{$name}-dark-hover{
+
+    .bg-#{$name}-dark-hover {
       &:hover {
         background-color: darken($color, $dark-value) !important;
       }
@@ -25,8 +25,8 @@
     .bg-#{$name}-darker {
       background-color: darken($color, $darker-value) !important;
     }
-    
-    .bg-#{$name}-darker-hover{
+
+    .bg-#{$name}-darker-hover {
       &:hover {
         background-color: darken($color, $darker-value) !important;
       }
@@ -35,8 +35,8 @@
     .bg-#{name}-darkest {
       background-color: darken($color, $darkest-value) !important;
     }
-    
-    .bg-#{$name}-darkest-hover{
+
+    .bg-#{$name}-darkest-hover {
       &:hover {
         background-color: darken($color, $darkest-value) !important;
       }
@@ -81,8 +81,8 @@
     .bg-#{$name}-light {
       background-color: lighten($color, $light-value) !important;
     }
-    
-    .bg-#{$name}-light-hover{
+
+    .bg-#{$name}-light-hover {
       &:hover {
         background-color: lighten($color, $light-value) !important;
       }
@@ -91,8 +91,8 @@
     .bg-#{$name}-lighter {
       background-color: lighten($color, $lighter-value) !important;
     }
-    
-    .bg-#{$name}-lighter-hover{
+
+    .bg-#{$name}-lighter-hover {
       &:hover {
         background-color: lighten($color, $lighter-value) !important;
       }
@@ -101,8 +101,8 @@
     .bg-#{$name}-lightest {
       background-color: lighten($color, $lightest-value) !important;
     }
-    
-    .bg-#{$name}-lightest-hover{
+
+    .bg-#{$name}-lightest-hover {
       &:hover {
         background-color: lighten($color, $lightest-value) !important;
       }
@@ -172,6 +172,34 @@
   }
 }
 
+@mixin ngs-background-gradient($name, $color1, $color2, $direction: 'to right') {
+  .bg-#{$name} {
+    background: linear-gradient(to top right, $color1, $color2) !important;
+  }
+
+  .bg-#{$name}-hover {
+    &:hover {
+      background: linear-gradient($direction, $color1, $color2) !important;
+    }
+  }
+}
+
+@mixin ngs-fill($name, $color) {
+  .fill-#{$name} {
+    fill: $color !important;
+  }
+
+  .fill-#{$name}-hover {
+    &:hover {
+      fill: $color !important;
+    }
+  }
+
+  .fill-#{$name}-transparent {
+    fill: rgba($color, 0.15) !important;
+  }
+}
+
 @include ngs-background-color(primary, $primary-bg-color);
 @include ngs-background-color(secondary, $secondary-bg-color);
 @include ngs-background-color(teritary, $teritary-bg-color);
@@ -226,3 +254,114 @@
 @include ngs-background-color(black-7, $color-black-7, false);
 @include ngs-background-color(black-8, $color-black-8, false);
 @include ngs-background-color(black-9, $color-black-9, false);
+
+@include ngs-background-gradient(primary-gradient, $primary-bg-color, lighten($primary-bg-color, 15%));
+@include ngs-background-gradient(secondary-gradient, $secondary-bg-color, lighten($secondary-bg-color, 15%));
+@include ngs-background-gradient(teritary-gradient, $teritary-bg-color, lighten($teritary-bg-color, 15%));
+@include ngs-background-gradient(success-gradient, $success-bg-color, lighten($success-bg-color, 15%));
+@include ngs-background-gradient(warning-gradient, $warning-bg-color, lighten($warning-bg-color, 15%));
+@include ngs-background-gradient(danger-gradient, $danger-bg-color, lighten($danger-bg-color, 15%));
+@include ngs-background-gradient(info-gradient, $info-bg-color, lighten($info-bg-color, 15%));
+@include ngs-background-gradient(pink-gradient, $pink-bg-color, lighten($pink-bg-color, 15%));
+@include ngs-background-gradient(red-gradient, $red-bg-color, lighten($red-bg-color, 15%));
+@include ngs-background-gradient(orange-gradient, $orange-bg-color, lighten($orange-bg-color, 15%));
+@include ngs-background-gradient(yellow-gradient, $yellow-bg-color, lighten($yellow-bg-color, 15%));
+@include ngs-background-gradient(lime-gradient, $lime-bg-color, lighten($lime-bg-color, 15%));
+@include ngs-background-gradient(green-gradient, $green-bg-color, lighten($green-bg-color, 15%));
+@include ngs-background-gradient(teal-gradient, $teal-bg-color, lighten($teal-bg-color, 15%));
+@include ngs-background-gradient(cyan-gradient, $cyan-bg-color, lighten($cyan-bg-color, 15%));
+@include ngs-background-gradient(blue-gradient, $blue-bg-color, lighten($blue-bg-color, 15%));
+@include ngs-background-gradient(persianblue-gradient, $persian-blue-bg-color, lighten($persian-blue-bg-color, 15%));
+@include ngs-background-gradient(indigo-gradient, $indigo-bg-color, lighten($indigo-bg-color, 15%));
+@include ngs-background-gradient(purple-gradient, $purple-bg-color, lighten($purple-bg-color, 15%));
+@include ngs-background-gradient(light-gradient, $light-bg-color, lighten($light-bg-color, 15%));
+@include ngs-background-gradient(dark-gradient, $dark-bg-color, lighten($dark-bg-color, 15%));
+@include ngs-background-gradient(azure-gradient, $azure-bg-color, lighten($azure-bg-color, 15%));
+
+@include ngs-background-gradient(gray-100-gradient, $color-gray-100, lighten($color-gray-100, 15%));
+@include ngs-background-gradient(gray-200-gradient, $color-gray-200, lighten($color-gray-200, 15%));
+@include ngs-background-gradient(gray-300-gradient, $color-gray-300, lighten($color-gray-300, 15%));
+@include ngs-background-gradient(gray-400-gradient, $color-gray-400, lighten($color-gray-400, 15%));
+@include ngs-background-gradient(gray-500-gradient, $color-gray-500, lighten($color-gray-500, 15%));
+@include ngs-background-gradient(gray-600-gradient, $color-gray-600, lighten($color-gray-600, 15%));
+@include ngs-background-gradient(gray-700-gradient, $color-gray-700, lighten($color-gray-700, 15%));
+@include ngs-background-gradient(gray-800-gradient, $color-gray-800, lighten($color-gray-800, 15%));
+@include ngs-background-gradient(gray-900-gradient, $color-gray-900, lighten($color-gray-900, 15%));
+
+@include ngs-background-gradient(white-gradient, $color-white, lighten($color-white, 15%));
+@include ngs-background-gradient(white-1-gradient, $color-white-1, lighten($color-white-1, 15%));
+@include ngs-background-gradient(white-2-gradient, $color-white-2, lighten($color-white-2, 15%));
+@include ngs-background-gradient(white-3-gradient, $color-white-3, lighten($color-white-3, 15%));
+@include ngs-background-gradient(white-4-gradient, $color-white-4, lighten($color-white-4, 15%));
+@include ngs-background-gradient(white-5-gradient, $color-white-5, lighten($color-white-5, 15%));
+@include ngs-background-gradient(white-6-gradient, $color-white-6, lighten($color-white-6, 15%));
+@include ngs-background-gradient(white-7-gradient, $color-white-7, lighten($color-white-7, 15%));
+@include ngs-background-gradient(white-8-gradient, $color-white-8, lighten($color-white-8, 15%));
+@include ngs-background-gradient(white-9-gradient, $color-white-9, lighten($color-white-9, 15%));
+
+@include ngs-background-gradient(black-gradient, $color-black, lighten($color-black, 15%));
+@include ngs-background-gradient(black-1-gradient, $color-black-1, lighten($color-black-1, 15%));
+@include ngs-background-gradient(black-2-gradient, $color-black-2, lighten($color-black-2, 15%));
+@include ngs-background-gradient(black-3-gradient, $color-black-3, lighten($color-black-3, 15%));
+@include ngs-background-gradient(black-4-gradient, $color-black-4, lighten($color-black-4, 15%));
+@include ngs-background-gradient(black-5-gradient, $color-black-5, lighten($color-black-5, 15%));
+@include ngs-background-gradient(black-6-gradient, $color-black-6, lighten($color-black-6, 15%));
+@include ngs-background-gradient(black-7-gradient, $color-black-7, lighten($color-black-7, 15%));
+@include ngs-background-gradient(black-8-gradient, $color-black-8, lighten($color-black-8, 15%));
+@include ngs-background-gradient(black-9-gradient, $color-black-9, lighten($color-black-9, 15%));
+
+
+@include ngs-fill(primary, $primary-bg-color);
+@include ngs-fill(secondary, $secondary-bg-color);
+@include ngs-fill(teritary, $teritary-bg-color);
+@include ngs-fill(success, $success-bg-color);
+@include ngs-fill(warning, $warning-bg-color);
+@include ngs-fill(danger, $danger-bg-color);
+@include ngs-fill(info, $info-bg-color);
+@include ngs-fill(pink, $pink-bg-color);
+@include ngs-fill(red, $red-bg-color);
+@include ngs-fill(orange, $orange-bg-color);
+@include ngs-fill(yellow, $yellow-bg-color);
+@include ngs-fill(lime, $lime-bg-color);
+@include ngs-fill(green, $green-bg-color);
+@include ngs-fill(teal, $teal-bg-color);
+@include ngs-fill(cyan, $cyan-bg-color);
+@include ngs-fill(blue, $blue-bg-color);
+@include ngs-fill(persianblue, $persian-blue-bg-color);
+@include ngs-fill(indigo, $indigo-bg-color);
+@include ngs-fill(purple, $purple-bg-color);
+@include ngs-fill(light, $light-bg-color);
+@include ngs-fill(dark, $dark-bg-color);
+@include ngs-fill(azure, $azure-bg-color);
+
+@include ngs-fill(gray-100, $color-gray-100);
+@include ngs-fill(gray-200, $color-gray-200);
+@include ngs-fill(gray-300, $color-gray-300);
+@include ngs-fill(gray-400, $color-gray-400);
+@include ngs-fill(gray-500, $color-gray-500);
+@include ngs-fill(gray-600, $color-gray-600);
+@include ngs-fill(gray-700, $color-gray-700);
+@include ngs-fill(gray-800, $color-gray-800);
+@include ngs-fill(gray-900, $color-gray-900);
+
+@include ngs-fill(white, $color-white);
+@include ngs-fill(white-1, $color-white-1);
+@include ngs-fill(white-2, $color-white-2);
+@include ngs-fill(white-3, $color-white-3);
+@include ngs-fill(white-4, $color-white-4);
+@include ngs-fill(white-5, $color-white-5);
+@include ngs-fill(white-6, $color-white-6);
+@include ngs-fill(white-7, $color-white-7);
+@include ngs-fill(white-8, $color-white-8);
+@include ngs-fill(white-9, $color-white-9);
+
+@include ngs-fill(black, $color-black);
+@include ngs-fill(black-1, $color-black-1);
+@include ngs-fill(black-2, $color-black-2);
+@include ngs-fill(black-3, $color-black-3);
+@include ngs-fill(black-4, $color-black-4);
+@include ngs-fill(black-5, $color-black-5);
+@include ngs-fill(black-6, $color-black-6);
+@include ngs-fill(black-7, $color-black-7);
+@include ngs-fill(black-8, $color-black-8);
+@include ngs-fill(black-9, $color-black-9);

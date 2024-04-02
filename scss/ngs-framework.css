@@ -4741,6 +4741,1026 @@ button.bg-black-9:focus {
   border-color: rgb(197, 201, 211) !important;
 }
 
+.bg-primary-gradient {
+  background: linear-gradient(to top right, rgb(143, 189, 86), #b3d28d) !important;
+}
+
+.bg-primary-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(143, 189, 86), #b3d28d) !important;
+}
+
+.bg-secondary-gradient {
+  background: linear-gradient(to top right, rgb(134, 142, 150), #afb4ba) !important;
+}
+
+.bg-secondary-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(134, 142, 150), #afb4ba) !important;
+}
+
+.bg-teritary-gradient {
+  background: linear-gradient(to top right, rgb(60, 162, 92), #65c683) !important;
+}
+
+.bg-teritary-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(60, 162, 92), #65c683) !important;
+}
+
+.bg-success-gradient {
+  background: linear-gradient(to top right, rgb(16, 162, 67), #17e860) !important;
+}
+
+.bg-success-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(16, 162, 67), #17e860) !important;
+}
+
+.bg-warning-gradient {
+  background: linear-gradient(to top right, rgb(231, 195, 84), #f0db97) !important;
+}
+
+.bg-warning-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(231, 195, 84), #f0db97) !important;
+}
+
+.bg-danger-gradient {
+  background: linear-gradient(to top right, rgb(209, 44, 71), #e06a7d) !important;
+}
+
+.bg-danger-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(209, 44, 71), #e06a7d) !important;
+}
+
+.bg-info-gradient {
+  background: linear-gradient(to top right, rgb(89, 173, 236), #9ecff4) !important;
+}
+
+.bg-info-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(89, 173, 236), #9ecff4) !important;
+}
+
+.bg-pink-gradient {
+  background: linear-gradient(to top right, rgb(245, 133, 152), #fbccd4) !important;
+}
+
+.bg-pink-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(245, 133, 152), #fbccd4) !important;
+}
+
+.bg-red-gradient {
+  background: linear-gradient(to top right, rgb(227, 47, 47), #ec7272) !important;
+}
+
+.bg-red-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(227, 47, 47), #ec7272) !important;
+}
+
+.bg-orange-gradient {
+  background: linear-gradient(to top right, rgb(252, 115, 3), #fd9d4f) !important;
+}
+
+.bg-orange-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(252, 115, 3), #fd9d4f) !important;
+}
+
+.bg-yellow-gradient {
+  background: linear-gradient(to top right, rgb(251, 176, 52), #fccd7f) !important;
+}
+
+.bg-yellow-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(251, 176, 52), #fccd7f) !important;
+}
+
+.bg-lime-gradient {
+  background: linear-gradient(to top right, rgb(123, 210, 53), #a4e074) !important;
+}
+
+.bg-lime-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(123, 210, 53), #a4e074) !important;
+}
+
+.bg-green-gradient {
+  background: linear-gradient(to top right, rgb(78, 204, 72), #88dd84) !important;
+}
+
+.bg-green-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(78, 204, 72), #88dd84) !important;
+}
+
+.bg-teal-gradient {
+  background: linear-gradient(to top right, rgb(43, 203, 186), #64ded1) !important;
+}
+
+.bg-teal-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(43, 203, 186), #64ded1) !important;
+}
+
+.bg-cyan-gradient {
+  background: linear-gradient(to top right, rgb(23, 162, 184), #36cee6) !important;
+}
+
+.bg-cyan-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(23, 162, 184), #36cee6) !important;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(to top right, rgb(70, 127, 207), #83a9df) !important;
+}
+
+.bg-blue-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(70, 127, 207), #83a9df) !important;
+}
+
+.bg-persianblue-gradient {
+  background: linear-gradient(to top right, rgb(54, 47, 113), #5045a7) !important;
+}
+
+.bg-persianblue-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(54, 47, 113), #5045a7) !important;
+}
+
+.bg-indigo-gradient {
+  background: linear-gradient(to top right, rgb(101, 116, 205), #9fa8e0) !important;
+}
+
+.bg-indigo-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(101, 116, 205), #9fa8e0) !important;
+}
+
+.bg-purple-gradient {
+  background: linear-gradient(to top right, rgb(102, 31, 214), #915ae7) !important;
+}
+
+.bg-purple-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(102, 31, 214), #915ae7) !important;
+}
+
+.bg-light-gradient {
+  background: linear-gradient(to top right, rgb(253, 254, 255), white) !important;
+}
+
+.bg-light-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(253, 254, 255), white) !important;
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(to top right, rgb(52, 58, 64), #56606a) !important;
+}
+
+.bg-dark-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(52, 58, 64), #56606a) !important;
+}
+
+.bg-azure-gradient {
+  background: linear-gradient(to top right, rgb(69, 170, 242), #8dcbf7) !important;
+}
+
+.bg-azure-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(69, 170, 242), #8dcbf7) !important;
+}
+
+.bg-gray-100-gradient {
+  background: linear-gradient(to top right, rgb(249, 249, 251), white) !important;
+}
+
+.bg-gray-100-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(249, 249, 251), white) !important;
+}
+
+.bg-gray-200-gradient {
+  background: linear-gradient(to top right, rgb(234, 237, 241), white) !important;
+}
+
+.bg-gray-200-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(234, 237, 241), white) !important;
+}
+
+.bg-gray-300-gradient {
+  background: linear-gradient(to top right, rgb(228, 231, 237), white) !important;
+}
+
+.bg-gray-300-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(228, 231, 237), white) !important;
+}
+
+.bg-gray-400-gradient {
+  background: linear-gradient(to top right, rgb(216, 219, 227), white) !important;
+}
+
+.bg-gray-400-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(216, 219, 227), white) !important;
+}
+
+.bg-gray-500-gradient {
+  background: linear-gradient(to top right, rgb(197, 201, 211), #f1f2f4) !important;
+}
+
+.bg-gray-500-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(197, 201, 211), #f1f2f4) !important;
+}
+
+.bg-gray-600-gradient {
+  background: linear-gradient(to top right, rgb(174, 179, 192), #d9dbe1) !important;
+}
+
+.bg-gray-600-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(174, 179, 192), #d9dbe1) !important;
+}
+
+.bg-gray-700-gradient {
+  background: linear-gradient(to top right, rgb(142, 149, 166), #b9bdc8) !important;
+}
+
+.bg-gray-700-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(142, 149, 166), #b9bdc8) !important;
+}
+
+.bg-gray-800-gradient {
+  background: linear-gradient(to top right, rgb(112, 122, 154), #9da4ba) !important;
+}
+
+.bg-gray-800-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(112, 122, 154), #9da4ba) !important;
+}
+
+.bg-gray-900-gradient {
+  background: linear-gradient(to top right, rgb(52, 58, 64), #56606a) !important;
+}
+
+.bg-gray-900-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(52, 58, 64), #56606a) !important;
+}
+
+.bg-white-gradient {
+  background: linear-gradient(to top right, rgb(255, 255, 255), white) !important;
+}
+
+.bg-white-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(255, 255, 255), white) !important;
+}
+
+.bg-white-1-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)) !important;
+}
+
+.bg-white-1-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)) !important;
+}
+
+.bg-white-2-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)) !important;
+}
+
+.bg-white-2-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)) !important;
+}
+
+.bg-white-3-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)) !important;
+}
+
+.bg-white-3-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)) !important;
+}
+
+.bg-white-4-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) !important;
+}
+
+.bg-white-4-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) !important;
+}
+
+.bg-white-5-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) !important;
+}
+
+.bg-white-5-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) !important;
+}
+
+.bg-white-6-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)) !important;
+}
+
+.bg-white-6-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)) !important;
+}
+
+.bg-white-7-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) !important;
+}
+
+.bg-white-7-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) !important;
+}
+
+.bg-white-8-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) !important;
+}
+
+.bg-white-8-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) !important;
+}
+
+.bg-white-9-gradient {
+  background: linear-gradient(to top right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)) !important;
+}
+
+.bg-white-9-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)) !important;
+}
+
+.bg-black-gradient {
+  background: linear-gradient(to top right, rgb(0, 0, 0), #262626) !important;
+}
+
+.bg-black-gradient-hover:hover {
+  background: linear-gradient("to right", rgb(0, 0, 0), #262626) !important;
+}
+
+.bg-black-1-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.1), rgba(38, 38, 38, 0.1)) !important;
+}
+
+.bg-black-1-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.1), rgba(38, 38, 38, 0.1)) !important;
+}
+
+.bg-black-2-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.2), rgba(38, 38, 38, 0.2)) !important;
+}
+
+.bg-black-2-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.2), rgba(38, 38, 38, 0.2)) !important;
+}
+
+.bg-black-3-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.3), rgba(38, 38, 38, 0.3)) !important;
+}
+
+.bg-black-3-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.3), rgba(38, 38, 38, 0.3)) !important;
+}
+
+.bg-black-4-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.4), rgba(38, 38, 38, 0.4)) !important;
+}
+
+.bg-black-4-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.4), rgba(38, 38, 38, 0.4)) !important;
+}
+
+.bg-black-5-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.5), rgba(38, 38, 38, 0.5)) !important;
+}
+
+.bg-black-5-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.5), rgba(38, 38, 38, 0.5)) !important;
+}
+
+.bg-black-6-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), rgba(38, 38, 38, 0.6)) !important;
+}
+
+.bg-black-6-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.6), rgba(38, 38, 38, 0.6)) !important;
+}
+
+.bg-black-7-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.7), rgba(38, 38, 38, 0.7)) !important;
+}
+
+.bg-black-7-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.7), rgba(38, 38, 38, 0.7)) !important;
+}
+
+.bg-black-8-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.8), rgba(38, 38, 38, 0.8)) !important;
+}
+
+.bg-black-8-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.8), rgba(38, 38, 38, 0.8)) !important;
+}
+
+.bg-black-9-gradient {
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.9), rgba(38, 38, 38, 0.9)) !important;
+}
+
+.bg-black-9-gradient-hover:hover {
+  background: linear-gradient("to right", rgba(0, 0, 0, 0.9), rgba(38, 38, 38, 0.9)) !important;
+}
+
+.fill-primary {
+  fill: rgb(143, 189, 86) !important;
+}
+
+.fill-primary-hover:hover {
+  fill: rgb(143, 189, 86) !important;
+}
+
+.fill-primary-transparent {
+  fill: rgba(143, 189, 86, 0.15) !important;
+}
+
+.fill-secondary {
+  fill: rgb(134, 142, 150) !important;
+}
+
+.fill-secondary-hover:hover {
+  fill: rgb(134, 142, 150) !important;
+}
+
+.fill-secondary-transparent {
+  fill: rgba(134, 142, 150, 0.15) !important;
+}
+
+.fill-teritary {
+  fill: rgb(60, 162, 92) !important;
+}
+
+.fill-teritary-hover:hover {
+  fill: rgb(60, 162, 92) !important;
+}
+
+.fill-teritary-transparent {
+  fill: rgba(60, 162, 92, 0.15) !important;
+}
+
+.fill-success {
+  fill: rgb(16, 162, 67) !important;
+}
+
+.fill-success-hover:hover {
+  fill: rgb(16, 162, 67) !important;
+}
+
+.fill-success-transparent {
+  fill: rgba(16, 162, 67, 0.15) !important;
+}
+
+.fill-warning {
+  fill: rgb(231, 195, 84) !important;
+}
+
+.fill-warning-hover:hover {
+  fill: rgb(231, 195, 84) !important;
+}
+
+.fill-warning-transparent {
+  fill: rgba(231, 195, 84, 0.15) !important;
+}
+
+.fill-danger {
+  fill: rgb(209, 44, 71) !important;
+}
+
+.fill-danger-hover:hover {
+  fill: rgb(209, 44, 71) !important;
+}
+
+.fill-danger-transparent {
+  fill: rgba(209, 44, 71, 0.15) !important;
+}
+
+.fill-info {
+  fill: rgb(89, 173, 236) !important;
+}
+
+.fill-info-hover:hover {
+  fill: rgb(89, 173, 236) !important;
+}
+
+.fill-info-transparent {
+  fill: rgba(89, 173, 236, 0.15) !important;
+}
+
+.fill-pink {
+  fill: rgb(245, 133, 152) !important;
+}
+
+.fill-pink-hover:hover {
+  fill: rgb(245, 133, 152) !important;
+}
+
+.fill-pink-transparent {
+  fill: rgba(245, 133, 152, 0.15) !important;
+}
+
+.fill-red {
+  fill: rgb(227, 47, 47) !important;
+}
+
+.fill-red-hover:hover {
+  fill: rgb(227, 47, 47) !important;
+}
+
+.fill-red-transparent {
+  fill: rgba(227, 47, 47, 0.15) !important;
+}
+
+.fill-orange {
+  fill: rgb(252, 115, 3) !important;
+}
+
+.fill-orange-hover:hover {
+  fill: rgb(252, 115, 3) !important;
+}
+
+.fill-orange-transparent {
+  fill: rgba(252, 115, 3, 0.15) !important;
+}
+
+.fill-yellow {
+  fill: rgb(251, 176, 52) !important;
+}
+
+.fill-yellow-hover:hover {
+  fill: rgb(251, 176, 52) !important;
+}
+
+.fill-yellow-transparent {
+  fill: rgba(251, 176, 52, 0.15) !important;
+}
+
+.fill-lime {
+  fill: rgb(123, 210, 53) !important;
+}
+
+.fill-lime-hover:hover {
+  fill: rgb(123, 210, 53) !important;
+}
+
+.fill-lime-transparent {
+  fill: rgba(123, 210, 53, 0.15) !important;
+}
+
+.fill-green {
+  fill: rgb(78, 204, 72) !important;
+}
+
+.fill-green-hover:hover {
+  fill: rgb(78, 204, 72) !important;
+}
+
+.fill-green-transparent {
+  fill: rgba(78, 204, 72, 0.15) !important;
+}
+
+.fill-teal {
+  fill: rgb(43, 203, 186) !important;
+}
+
+.fill-teal-hover:hover {
+  fill: rgb(43, 203, 186) !important;
+}
+
+.fill-teal-transparent {
+  fill: rgba(43, 203, 186, 0.15) !important;
+}
+
+.fill-cyan {
+  fill: rgb(23, 162, 184) !important;
+}
+
+.fill-cyan-hover:hover {
+  fill: rgb(23, 162, 184) !important;
+}
+
+.fill-cyan-transparent {
+  fill: rgba(23, 162, 184, 0.15) !important;
+}
+
+.fill-blue {
+  fill: rgb(70, 127, 207) !important;
+}
+
+.fill-blue-hover:hover {
+  fill: rgb(70, 127, 207) !important;
+}
+
+.fill-blue-transparent {
+  fill: rgba(70, 127, 207, 0.15) !important;
+}
+
+.fill-persianblue {
+  fill: rgb(54, 47, 113) !important;
+}
+
+.fill-persianblue-hover:hover {
+  fill: rgb(54, 47, 113) !important;
+}
+
+.fill-persianblue-transparent {
+  fill: rgba(54, 47, 113, 0.15) !important;
+}
+
+.fill-indigo {
+  fill: rgb(101, 116, 205) !important;
+}
+
+.fill-indigo-hover:hover {
+  fill: rgb(101, 116, 205) !important;
+}
+
+.fill-indigo-transparent {
+  fill: rgba(101, 116, 205, 0.15) !important;
+}
+
+.fill-purple {
+  fill: rgb(102, 31, 214) !important;
+}
+
+.fill-purple-hover:hover {
+  fill: rgb(102, 31, 214) !important;
+}
+
+.fill-purple-transparent {
+  fill: rgba(102, 31, 214, 0.15) !important;
+}
+
+.fill-light {
+  fill: rgb(253, 254, 255) !important;
+}
+
+.fill-light-hover:hover {
+  fill: rgb(253, 254, 255) !important;
+}
+
+.fill-light-transparent {
+  fill: rgba(253, 254, 255, 0.15) !important;
+}
+
+.fill-dark {
+  fill: rgb(52, 58, 64) !important;
+}
+
+.fill-dark-hover:hover {
+  fill: rgb(52, 58, 64) !important;
+}
+
+.fill-dark-transparent {
+  fill: rgba(52, 58, 64, 0.15) !important;
+}
+
+.fill-azure {
+  fill: rgb(69, 170, 242) !important;
+}
+
+.fill-azure-hover:hover {
+  fill: rgb(69, 170, 242) !important;
+}
+
+.fill-azure-transparent {
+  fill: rgba(69, 170, 242, 0.15) !important;
+}
+
+.fill-gray-100 {
+  fill: rgb(249, 249, 251) !important;
+}
+
+.fill-gray-100-hover:hover {
+  fill: rgb(249, 249, 251) !important;
+}
+
+.fill-gray-100-transparent {
+  fill: rgba(249, 249, 251, 0.15) !important;
+}
+
+.fill-gray-200 {
+  fill: rgb(234, 237, 241) !important;
+}
+
+.fill-gray-200-hover:hover {
+  fill: rgb(234, 237, 241) !important;
+}
+
+.fill-gray-200-transparent {
+  fill: rgba(234, 237, 241, 0.15) !important;
+}
+
+.fill-gray-300 {
+  fill: rgb(228, 231, 237) !important;
+}
+
+.fill-gray-300-hover:hover {
+  fill: rgb(228, 231, 237) !important;
+}
+
+.fill-gray-300-transparent {
+  fill: rgba(228, 231, 237, 0.15) !important;
+}
+
+.fill-gray-400 {
+  fill: rgb(216, 219, 227) !important;
+}
+
+.fill-gray-400-hover:hover {
+  fill: rgb(216, 219, 227) !important;
+}
+
+.fill-gray-400-transparent {
+  fill: rgba(216, 219, 227, 0.15) !important;
+}
+
+.fill-gray-500 {
+  fill: rgb(197, 201, 211) !important;
+}
+
+.fill-gray-500-hover:hover {
+  fill: rgb(197, 201, 211) !important;
+}
+
+.fill-gray-500-transparent {
+  fill: rgba(197, 201, 211, 0.15) !important;
+}
+
+.fill-gray-600 {
+  fill: rgb(174, 179, 192) !important;
+}
+
+.fill-gray-600-hover:hover {
+  fill: rgb(174, 179, 192) !important;
+}
+
+.fill-gray-600-transparent {
+  fill: rgba(174, 179, 192, 0.15) !important;
+}
+
+.fill-gray-700 {
+  fill: rgb(142, 149, 166) !important;
+}
+
+.fill-gray-700-hover:hover {
+  fill: rgb(142, 149, 166) !important;
+}
+
+.fill-gray-700-transparent {
+  fill: rgba(142, 149, 166, 0.15) !important;
+}
+
+.fill-gray-800 {
+  fill: rgb(112, 122, 154) !important;
+}
+
+.fill-gray-800-hover:hover {
+  fill: rgb(112, 122, 154) !important;
+}
+
+.fill-gray-800-transparent {
+  fill: rgba(112, 122, 154, 0.15) !important;
+}
+
+.fill-gray-900 {
+  fill: rgb(52, 58, 64) !important;
+}
+
+.fill-gray-900-hover:hover {
+  fill: rgb(52, 58, 64) !important;
+}
+
+.fill-gray-900-transparent {
+  fill: rgba(52, 58, 64, 0.15) !important;
+}
+
+.fill-white {
+  fill: rgb(255, 255, 255) !important;
+}
+
+.fill-white-hover:hover {
+  fill: rgb(255, 255, 255) !important;
+}
+
+.fill-white-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-1 {
+  fill: rgba(255, 255, 255, 0.1) !important;
+}
+
+.fill-white-1-hover:hover {
+  fill: rgba(255, 255, 255, 0.1) !important;
+}
+
+.fill-white-1-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-2 {
+  fill: rgba(255, 255, 255, 0.2) !important;
+}
+
+.fill-white-2-hover:hover {
+  fill: rgba(255, 255, 255, 0.2) !important;
+}
+
+.fill-white-2-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-3 {
+  fill: rgba(255, 255, 255, 0.3) !important;
+}
+
+.fill-white-3-hover:hover {
+  fill: rgba(255, 255, 255, 0.3) !important;
+}
+
+.fill-white-3-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-4 {
+  fill: rgba(255, 255, 255, 0.4) !important;
+}
+
+.fill-white-4-hover:hover {
+  fill: rgba(255, 255, 255, 0.4) !important;
+}
+
+.fill-white-4-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-5 {
+  fill: rgba(255, 255, 255, 0.5) !important;
+}
+
+.fill-white-5-hover:hover {
+  fill: rgba(255, 255, 255, 0.5) !important;
+}
+
+.fill-white-5-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-6 {
+  fill: rgba(255, 255, 255, 0.6) !important;
+}
+
+.fill-white-6-hover:hover {
+  fill: rgba(255, 255, 255, 0.6) !important;
+}
+
+.fill-white-6-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-7 {
+  fill: rgba(255, 255, 255, 0.7) !important;
+}
+
+.fill-white-7-hover:hover {
+  fill: rgba(255, 255, 255, 0.7) !important;
+}
+
+.fill-white-7-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-8 {
+  fill: rgba(255, 255, 255, 0.8) !important;
+}
+
+.fill-white-8-hover:hover {
+  fill: rgba(255, 255, 255, 0.8) !important;
+}
+
+.fill-white-8-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-white-9 {
+  fill: rgba(255, 255, 255, 0.9) !important;
+}
+
+.fill-white-9-hover:hover {
+  fill: rgba(255, 255, 255, 0.9) !important;
+}
+
+.fill-white-9-transparent {
+  fill: rgba(255, 255, 255, 0.15) !important;
+}
+
+.fill-black {
+  fill: rgb(0, 0, 0) !important;
+}
+
+.fill-black-hover:hover {
+  fill: rgb(0, 0, 0) !important;
+}
+
+.fill-black-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-1 {
+  fill: rgba(0, 0, 0, 0.1) !important;
+}
+
+.fill-black-1-hover:hover {
+  fill: rgba(0, 0, 0, 0.1) !important;
+}
+
+.fill-black-1-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-2 {
+  fill: rgba(0, 0, 0, 0.2) !important;
+}
+
+.fill-black-2-hover:hover {
+  fill: rgba(0, 0, 0, 0.2) !important;
+}
+
+.fill-black-2-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-3 {
+  fill: rgba(0, 0, 0, 0.3) !important;
+}
+
+.fill-black-3-hover:hover {
+  fill: rgba(0, 0, 0, 0.3) !important;
+}
+
+.fill-black-3-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-4 {
+  fill: rgba(0, 0, 0, 0.4) !important;
+}
+
+.fill-black-4-hover:hover {
+  fill: rgba(0, 0, 0, 0.4) !important;
+}
+
+.fill-black-4-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-5 {
+  fill: rgba(0, 0, 0, 0.5) !important;
+}
+
+.fill-black-5-hover:hover {
+  fill: rgba(0, 0, 0, 0.5) !important;
+}
+
+.fill-black-5-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-6 {
+  fill: rgba(0, 0, 0, 0.6) !important;
+}
+
+.fill-black-6-hover:hover {
+  fill: rgba(0, 0, 0, 0.6) !important;
+}
+
+.fill-black-6-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-7 {
+  fill: rgba(0, 0, 0, 0.7) !important;
+}
+
+.fill-black-7-hover:hover {
+  fill: rgba(0, 0, 0, 0.7) !important;
+}
+
+.fill-black-7-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-8 {
+  fill: rgba(0, 0, 0, 0.8) !important;
+}
+
+.fill-black-8-hover:hover {
+  fill: rgba(0, 0, 0, 0.8) !important;
+}
+
+.fill-black-8-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.fill-black-9 {
+  fill: rgba(0, 0, 0, 0.9) !important;
+}
+
+.fill-black-9-hover:hover {
+  fill: rgba(0, 0, 0, 0.9) !important;
+}
+
+.fill-black-9-transparent {
+  fill: rgba(0, 0, 0, 0.15) !important;
+}
+
 .border-primary {
   border-color: rgb(143, 189, 86) !important;
 }
@@ -26010,6 +27030,86 @@ table.dataTable > thead .sorting, table.dataTable > thead .sorting_asc, table.da
   color: rgb(108, 117, 125) !important;
 }
 
+.text-weight-bold {
+  font-weight: bold !important;
+}
+
+.text-weight-bolder {
+  font-weight: bolder !important;
+}
+
+.text-weight-normal {
+  font-weight: normal !important;
+}
+
+.text-weight-light {
+  font-weight: lighter !important;
+}
+
+.text-weight-lighter {
+  font-weight: lighter !important;
+}
+
+.text-weight-100 {
+  font-weight: 100 !important;
+}
+
+.text-weight-200 {
+  font-weight: 200 !important;
+}
+
+.text-weight-300 {
+  font-weight: 300 !important;
+}
+
+.text-weight-400 {
+  font-weight: 400 !important;
+}
+
+.text-weight-500 {
+  font-weight: 500 !important;
+}
+
+.text-weight-600 {
+  font-weight: 600 !important;
+}
+
+.text-weight-700 {
+  font-weight: 700 !important;
+}
+
+.text-weight-800 {
+  font-weight: 800 !important;
+}
+
+.text-weight-900 {
+  font-weight: 900 !important;
+}
+
+.text-italic {
+  font-style: italic !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-overline {
+  text-decoration: overline !important;
+}
+
+.text-line-through {
+  text-decoration: line-through !important;
+}
+
+.text-break-word {
+  word-wrap: break-word !important;
+}
+
+.text-break-all {
+  word-break: break-all !important;
+}
+
 a {
   text-decoration: none;
 }
@@ -26463,6 +27563,9 @@ a {
 .form-group {
   margin-bottom: 0.75rem !important;
 }
+.form-group label {
+  margin-bottom: 0.3rem;
+}
 
 .form-switch {
   outline: none !important;
@@ -26493,6 +27596,10 @@ input:focus, input:active:focus, input:active {
 
 input[type=checkbox].form-check-input.form-lg-check-input {
   font-size: 1.4rem !important;
+}
+
+span.error {
+  margin-left: 0.4rem;
 }
 
 .dataTables_wrapper .dataTables_paginate {
